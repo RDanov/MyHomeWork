@@ -10,18 +10,16 @@ body {
     font-size: 4rem;
     color: white;
     font-weight: bold;
-    font-family: Helvetica;
+    font-family: Helvetica, serif;
     text-align: center;
     padding: 1rem;
 }
 
 .floats {
     overflow: hidden;
-    width: 100%;
 }
 
 .floats .column {
-    background-color: #2ecc71;
     float: left;
     width: calc(100% / 3);
 }
@@ -33,3 +31,37 @@ body {
 .floats .column:last-of-type {
     background-color: #3498db;
 }
+
+.blocks {
+    display: inline-block;
+    list-style: none;
+    width: 33.33%;
+}
+
+.column.blocks {
+    display: inline;
+
+}
+
+
+.flexbox {
+    display: flex;
+    flex: auto;
+    margin: auto;
+    justify-content: space-between;
+    width: 100%;
+
+}
+
+.flexbox.column {
+    flex: auto;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    flex-grow: 400;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: "column column column"
+}
+
