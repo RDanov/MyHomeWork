@@ -17,4 +17,19 @@ body {
 
 .floats {
     overflow: hidden;
+    width: 100%;
+}
+
+.floats .column {
+    background-color: #2ecc71;
+    float: left;
+    width: calc(100% / 3);
+}
+
+.floats .column:first-of-type {
+    background-color: #1abc9c;
+}
+
+.floats .column:last-of-type {
+    background-color: #3498db;
 }
