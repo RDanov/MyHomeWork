@@ -7,55 +7,52 @@ body {
 }
 
 .header {
-    overflow: hidden;
-    margin: 5px 0 0 0;
     border: 5px solid #ff3366;
     background-color: #1abc9c;
     font-size: 5rem;
     color: blue;
     font-weight: bold;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     text-align: center;
 }
 
 .content {
     display: flex;
-    overflow: hidden;
-    margin: 5px 0 0 0;
     border: 5px solid #ff3366;
+    height: 3000px;
 }
 
 .content .column {
+    align-items: stretch;
+    align-content: stretch;
     font-size: 5rem;
     color: blue;
     font-weight: bold;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     text-align: center;
 }
 
 .content .column:first-of-type {
     background-color: #16a085;
     flex-grow: 1;
-    height: 500px;
+
 }
 
 .content .column:last-of-type {
     background-color: #2980b9;
     flex-grow: 3;
-    height: inherit;
+
 }
 
 .footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-    overflow: hidden;
-    margin: 5px 0 0 0;
     border: 5px solid #ff3366;
     background-color: #1abc9c;
     font-size: 5rem;
     color: blue;
     font-weight: bold;
-    font-family: Helvetica;
+    font-family: Helvetica, sans-serif;
     text-align: center;
 }
