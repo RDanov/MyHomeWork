@@ -19,10 +19,13 @@ body {
 .content {
     display: flex;
     border: 5px solid #ff3366;
-    height: 3000px;
+    /*height: 3000px;*/
 }
 
 .content .column {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     align-items: stretch;
     align-content: stretch;
     font-size: 5rem;
