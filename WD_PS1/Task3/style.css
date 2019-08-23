@@ -116,6 +116,7 @@ nav li {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
 }
 
@@ -129,10 +130,11 @@ nav li {
     border: 2px solid #fff;
     font-size: 20px;
     margin-top: 15px;
+    justify-content: center;
 }
 
 .form_question {
-    text-align: center;
+
 }
 
 .myInput {
@@ -142,7 +144,7 @@ nav li {
 
 .myQuestion {
     margin-top: 15px;
-    text-align: left;
     width: 800px;
     height: 200px;
+    vertical-align: text-top;
 }
