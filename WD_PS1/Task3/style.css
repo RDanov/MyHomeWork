@@ -69,10 +69,20 @@ nav li {
     width: 100%;
     height: 800px;
     background-color: #16a085;
+
+
 }
 
 .wrapper .content .content_top .column {
+    navbutton_background_color: #1abc9c;
+}
 
+.wrapper .content .content_top .column .buy_now {
+    color: #fff;
+    background-color: #16a085;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #fff;
 }
 
 .wrapper .content.content_top .column:first-of-type {
@@ -81,58 +91,38 @@ nav li {
 
 .wrapper .content .content_top .column:last-of-type {
     color: #fff;
+
 }
+
 
 .wrapper .content .content_center {
     display: flex;
     flex-direction: row;
     height: 600px;
     text-align: center;
+    justify-content: center;
 }
 
 .wrapper .content .content_center .column {
     flex-grow: 1;
-
 }
-
 
 .wrapper .content .content_bottom {
-    display: flex;
-    flex-direction: row;
-    height: 800px;
     background-color: #1abc9c;
+    height: 800px;
+    width: 100%;
+    font-size: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 
-
-/*.wrapper {*/
-/*    display: flex;*/
-/*    flex-direction: column;*/
-/*    width: 100%;*/
-/*    height: 1000px;*/
-/*}*/
-
-/*.wrapper.contentFirst {*/
-/*    background-color: #1abc9c;*/
-/*    height: 500px;*/
-/*}*/
-
-/*.wrapper.contentSecond {*/
-/*    display: flex;*/
-/*    flex-direction: row;*/
-/*    height: 400px;*/
-
-/*}*/
-
-/*.footer {*/
-/*    position: fixed;*/
-/*    bottom: 0;*/
-/*    width: 100%;*/
-/*    height: 500px;*/
-/*    border: none;*/
-/*    background-color: #16a085;*/
-/*    font-size: 5rem;*/
-/*    color: blue;*/
-/*    font-weight: bold;*/
-/*    font-family: Helvetica, sans-serif;*/
-/*    text-align: center;*/
-/*}*/
+.wrapper .content .content_bottom .form_question .button_submit {
+    color: #fff;
+    background-color: #1abc9c;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+}
