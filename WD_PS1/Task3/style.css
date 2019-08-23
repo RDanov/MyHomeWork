@@ -122,7 +122,27 @@ nav li {
 .wrapper .content .content_bottom .form_question .button_submit {
     color: #fff;
     background-color: #1abc9c;
+    width: 250px;
+    height: 60px;
     padding: 5px;
     border-radius: 5px;
     border: 2px solid #fff;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.form_question {
+    text-align: center;
+}
+
+.myInput {
+    width: 800px;
+    height: 40px;
+}
+
+.myQuestion {
+    margin-top: 15px;
+    text-align: left;
+    width: 800px;
+    height: 200px;
 }
