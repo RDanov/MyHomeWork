@@ -86,11 +86,19 @@ nav li {
 }
 
 .wrapper .content.content_top .column:first-of-type {
+    flex: 1;
 
 }
 
+.image {
+    margin: 40px 0px 70px 40px;
+    height: 700px;
+}
+
 .wrapper .content .content_top .column:last-of-type {
+    flex: 1;
     color: #fff;
+    justify-content: center;
 
 }
 
@@ -98,13 +106,21 @@ nav li {
 .wrapper .content .content_center {
     display: flex;
     flex-direction: row;
-    height: 600px;
+    height: 500px;
     text-align: center;
     justify-content: center;
 }
 
 .wrapper .content .content_center .column {
     flex-grow: 1;
+}
+
+.content_header {
+    font-size: 30px;
+}
+
+.column_content {
+    font-size: 20px;
 }
 
 .wrapper .content .content_bottom {
@@ -143,6 +159,7 @@ nav li {
 }
 
 .myQuestion {
+    color: #000;
     margin-top: 15px;
     width: 800px;
     height: 200px;

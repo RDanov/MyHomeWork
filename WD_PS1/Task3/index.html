@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">
     <title>Task3</title>
@@ -28,8 +28,9 @@
     <section class="content">
         <div class="content_top">
             <div class="column"></div>
+            <img src="img/phone.png" alt="image of phone" class="image">
             <div class="column">
-                <span><a href="#"> Our awesome app is ready to use! </a> </span>
+                <span><a href="#"> <h2> <b> Our awesome app is ready to use!</b> </h2> </a> </span>
                 <p></p>
                 <span><a href="#"> Loren ipsum dolor sit amet, consectetur adipisicing elit. Pariatur vero
             laboriosam adipisci dolores aut blanditiis neccesitatibus invertore, eius fuga porro recusandae
@@ -43,9 +44,11 @@
             <div class="column">
                 <i class="fa fa-code"></i>
                 <p></p>
-                <span><a href="#">
+                <span><a href="#" class="content_header">
                 <b> Web development</b>
                     <p></p>
+                    </a> </span>
+                <span><a href="#" class="column_content">
                     Loren ipsum dolor sit amet, consectetur adipisicing elit. Nobis nostrum
                 suscipit vel ipsa fugiat tempore molestiae error autem architecto eum, natus, voluplatum
                 eos commodi debitis, expedita pariatur recusandae temporibus voluplatibus!</a> </span>
@@ -53,9 +56,11 @@
             <div class="column">
                 <i class="fa fa-android"></i>
                 <p></p>
-                <span><a href="#">
+                <span><a href="#" class="content_header">
                     <b> Mobile development</b>
                     <p></p>
+                </a></span>
+                <span><a href="#" class="column_content">
                     Loren ipsum dolor sit amet, consectetur adipisicing elit. Nobis nostrum
                 suscipit vel ipsa fugiat tempore molestiae error autem architecto eum, natus, voluplatum
                 eos commodi debitis, expedita pariatur recusandae temporibus voluplatibus!</a> </span>
@@ -63,9 +68,11 @@
             <div class="column">
                 <i class="fa fa-cloud"></i>
                 <p></p>
-                <span><a href="#">
+                <span><a href="#" class="content_header">
                     <b> Hightload</b>
                     <p></p>
+                    </a></span>
+                <span><a href="#" class="column_content">
                     Loren ipsum dolor sit amet, consectetur adipisicing elit. Nobis nostrum
                 suscipit vel ipsa fugiat tempore molestiae error autem architecto eum, natus, voluplatum
                 eos commodi debitis, expedita pariatur recusandae temporibus voluplatibus!</a> </span>
@@ -73,20 +80,14 @@
         </div>
         <div class="content_bottom">
             <div class="form_question">
-                <h3><b> Contact us! </b></h3>
-                <div class="feedback_form">
+                <h2><b> Contact us! </b></h2>
+                <form class="feedback_form">
                     <input type="text" name="name" placeholder="Type here your name, please" class="myInput">
-                    <p></p>
-                    <label>
-                        <input type="text" name="email" placeholder="Type here your email, please" class="myInput">
-                    </label>
-                    <p></p>
-                    <input type="text" name="phone" placeholder="Type here your phone, please" class="myInput">
-                    <p></p>
-                    <input type="text" name="question" placeholder="Ask your question" class="myQuestion">
-                    <p></p>
+                    <p><input type="text" name="email" placeholder="Type here your email, please" class="myInput"></p>
+                    <p><input type="text" name="phone" placeholder="Type here your phone, please" class="myInput"></p>
+                    <p><textarea name="question" placeholder="Ask your question" class="myQuestion"></textarea></p>
                     <button class="button_submit" type="submit"> Send email!</button>
-                </div>
+                </form>
             </div>
         </div>
     </section>
