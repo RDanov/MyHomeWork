@@ -1,0 +1,44 @@
+body {
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+
+}
+
+.wrapper .column {
+    flex-grow: 1;
+    height: 600px;
+
+}
+
+.wrapper .column:first-of-type {
+    flex-grow: 1;
+    width: 50%;
+
+}
+
+.image {
+    height: 600px;
+
+}
+
+.wrapper .column:last-of-type {
+    flex-grow: 1;
+    width: 50%;
+    background-color: #202020;
+    margin-left: 0;
+    text-align: center;
+    position: relative;
+
+}
+
+.name_of_game {
+    color: #d3bb89;
+    font-size: 40px;
+    font-family: serif -EB Garamond;
+    text-transform: uppercase;
+    margin-top: 40px;
+
+}
