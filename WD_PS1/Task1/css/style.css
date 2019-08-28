@@ -12,7 +12,6 @@ body {
     font-weight: bold;
     font-family: Helvetica;
     text-align: center;
-    /*padding: 1rem;*/
 }
 
 .floats {
@@ -34,14 +33,11 @@ body {
     background-color: #3498db;
 }
 
-.blocks {
-    /*display: inline-block;*/
-}
-
 .blocks .column {
     display: inline-block;
-    width: 33%;
+    width: calc(100% / 3);
     background-color: #d35400;
+    margin-right: -4px;
 }
 
 .blocks .column:first-of-type {
