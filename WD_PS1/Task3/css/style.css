@@ -16,7 +16,12 @@ body {
     font-family: Helvetica, sans-serif;
 }
 
+strong {
+    color: #1abc9c
+}
+
 .wrapper .header .column_left {
+
     flex-grow: 1;
     text-align: center;
     left: 40px;
