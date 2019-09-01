@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="72b2884f-81e6-4ed7-829c-808c26be611d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/WD_PS1/Task4/fonts/Game of Thrones.ttf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WD_PS1/Task3/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS1/Task3/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WD_PS1/Task3/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS1/Task3/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WD_PS1/Task4/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS1/Task4/css/style.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,23 +26,23 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/WD_PS1/Task4/css/img" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/WD_PS1/Task4/fonts" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task4" />
+      <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task3\CSS" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task4\fonts" />
       <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task4\css\img" />
       <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task4" />
       <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task3\img" />
       <recent name="C:\Users\rdanov\PhpstormProjects\MyHomeWork\WD_PS1\Task3" />
-      <recent name="C:\Users\rdanov\PhpstormProjects\MyHomeWork\WD_PS1\Task2" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task4" />
-      <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task3\CSS" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -55,7 +57,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JavaScript Debug.index.html (5)">
+  <component name="RunManager" selected="JavaScript Debug.index.html (3)">
     <configuration name="index.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MyHomeWork/WD_PS1/Task1/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
@@ -73,11 +75,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.index.html (5)" />
-        <item itemvalue="JavaScript Debug.index.html (4)" />
         <item itemvalue="JavaScript Debug.index.html (3)" />
-        <item itemvalue="JavaScript Debug.index.html (2)" />
+        <item itemvalue="JavaScript Debug.index.html (4)" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="JavaScript Debug.index.html (5)" />
+        <item itemvalue="JavaScript Debug.index.html (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -109,6 +111,9 @@
       <workItem from="1566751406864" duration="8538000" />
       <workItem from="1566833933771" duration="5230000" />
       <workItem from="1566976703641" duration="1254000" />
+      <workItem from="1567010553067" duration="4105000" />
+      <workItem from="1567015108740" duration="2047000" />
+      <workItem from="1567092000072" duration="3597000" />
     </task>
     <task id="LOCAL-00001" summary="layout of blocks using the float and grid commands is completed">
       <created>1565704886933</created>
@@ -194,7 +199,28 @@
       <option name="project" value="LOCAL" />
       <updated>1566761984842</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Task 1 fixed inline block">
+      <created>1567011296927</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1567011296927</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Task 4 added font Game of Thrones">
+      <created>1567014622283</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1567014622283</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Task 4 added text in right column">
+      <created>1567017137140</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1567017137140</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TodoView">
@@ -246,6 +272,9 @@
     <MESSAGE value="In Task 3 added image, added text area" />
     <MESSAGE value="In Task 3 formatted font awesome, formatted content_center" />
     <MESSAGE value="Task 3 completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="Task 3 completed" />
+    <MESSAGE value="Task 1 fixed inline block" />
+    <MESSAGE value="Task 4 added font Game of Thrones" />
+    <MESSAGE value="Task 4 added text in right column" />
+    <option name="LAST_COMMIT_MESSAGE" value="Task 4 added text in right column" />
   </component>
 </project>
