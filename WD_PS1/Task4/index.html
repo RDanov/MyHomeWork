@@ -13,16 +13,47 @@
     <div class="column"><img src="img/maxresdefault.jpg" alt="image of phone" class="image">
     </div>
     <div class="column">
-        <span><a href="#" class="name_of_game">game of trones</a> </span>
-        <p></p>
-        <span><a href="#" class="second_string">You've succesfully joined the game
-        <p></p>Tell us more about yourself.</a> </span>
-        <p></p>
-        <span><a href="#" class="menu_of_game">Who are you?</a></span>
-        <p></p>
-        <span><a href="#" class="menu_of_game">You Great House</a></span>
-        <p></p>
-        <span><a href="#" class="menu_of_game">You preferences, hobbies, wishes, etc.</a></span>
+        <div class="title"><h1>game of trones</h1></div>
+<!--                <form class="menu_of_game">-->
+<!--                    <div class="font_of_menu">Enter your email</div>-->
+<!--                    <div class="input"><label>-->
+<!--                        <input type="email" name="email" placeholder="arya@westeros.com"-->
+<!--                               class="input_username"/>-->
+<!--                    </label>-->
+<!--                    </div>-->
+<!--                    <p></p>-->
+<!--                    <div class="font_of_menu">Choose secure password</div>-->
+<!--                    <div class="font_of_submenu">Must be at least 8 characters</div>-->
+<!--                    <div class="input"><label>-->
+<!--                        <input type="password" name="your_password" maxlength="30" minlength="8" placeholder="password"-->
+<!--                               class="input_username"/>-->
+<!--                    </label>-->
+<!--                    </div>-->
+<!--                    <label class="container">Remember me-->
+<!--                        <input type="checkbox" checked="remember">-->
+<!--                        <span class="checkbox"></span>-->
+<!--                    </label>-->
+<!--                    <input type="submit" class="save" value="Sign Up"/>-->
+<!--                </form>-->
+        <form class="menu_of_game">
+            <div class="sub_title"><p>You've succesfully joined the game</p>
+                <p>Tell us more about yourself.</a></p></div>
+            <div class="font_of_menu">Who are you?</div>
+            <div class="font_of_submenu">Alpha-numeric username</div>
+            <div class="input"><input type="text" name="username" placeholder="arya" class="input_username"></input>
+            </div>
+            <p></p>
+            <div class="font_of_menu">You Great House</div>
+            <div class="select"><select type="text" name="user_house" class="select_house">
+                <option>Select House</option>
+            </select></div>
+            <p></p>
+            <div class="font_of_menu">You preferences, hobbies, wishes, etc.</div>
+            <div class="input"><input type="text" name="your_preferences" placeholder="I have a long TOKILL list..."
+                                      class="input_username"></input>
+            </div>
+            <input type="submit" class="save" value="Save"></input>
+        </form>
     </div>
 </div>
 </body>

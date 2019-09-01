@@ -9,7 +9,7 @@ body {
 
 .wrapper .column {
     flex-grow: 1;
-    height: 600px;
+    height: 750px;
 }
 
 .wrapper .column:first-of-type {
@@ -18,7 +18,7 @@ body {
 }
 
 .image {
-    height: 600px;
+    height: 750px;
 
 }
 
@@ -33,27 +33,153 @@ body {
 }
 
 
-.name_of_game {
+.wrapper .column .title {
     color: #d3bb89;
     font-size: 40px;
-    font-family: "Game of Thrones";
+    font-family: "Game of Thrones", serif;
     text-transform: uppercase;
-    margin-top: 40px;
+    margin-top: 50px;
+    position: relative;
 }
 
-.second_string {
+.menu_of_game {
+
+}
+
+.sub_title {
     color: #fef8eb;
     font-family: sans-serif;
     font-size: 20px;
-    margin-top: 100px;
-    margin-left: 60px;
-    border-left-color: #d3bb89;
+    margin-top: 50px;
+    margin-left: 180px;
+    padding-left: 40px;
+    border-left: solid 3px #d3bb89;
+    position: relative;
+    text-align: left;
 }
- .menu_of_game {
-     color: #d3bb89;
-     font-family: Garamond;
-     font-size: 20px;
-     margin-left: 60px;
 
- }
+.column .menu_of_game .font_of_menu {
+    color: #d3bb89;
+    font-family: Garamond, serif;
+    font-size: 30px;
+    margin-left: 180px;
+    margin-top: 30px;
+    text-align: left;
+    position: relative;
+}
+
+.column .menu_of_game .font_of_submenu {
+    color: #fef8eb;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 180px;
+    text-align: left;
+    position: relative;
+}
+
+.save {
+    margin-top: 50px;
+    width: 500px;
+    height: 50px;
+    color: #fef8eb;
+    cursor: pointer;
+    font-size: 20px;
+    background-color: #c19a49;
+    border: none;
+    margin-left: 20px;
+}
+
+.input {
+    position: relative;
+    text-align: left;
+}
+
+.input_username {
+    width: 500px;
+    background-color: #202020;
+    font-size: 20px;
+    justify-content: left;
+    border: none;
+    padding: 20px 0 20px 0;
+    border-bottom: solid 3px #d3bb89;
+    margin-left: 180px;
+}
+
+.select {
+    position: relative;
+    text-align: left;
+}
+
+.select_house {
+    color: #fef8eb;
+    width: 500px;
+    background-color: #202020;
+    font-size: 20px;
+    justify-content: left;
+    border: none;
+    padding: 20px 0 20px 0;
+    border-bottom: solid 3px #d3bb89;
+    margin-left: 180px;
+    margin-bottom: 40px;
+}
+
+.container {
+    color: #d3bb89;
+    display: flex;
+    position: relative;
+    padding-left: 35px;
+    margin-top: 25px;
+    margin-left: 180px;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    border-radius: 10%;
+    background-color: #eee;
+}
+
+.container:hover input ~ .checkbox {
+    background-color: #d3bb89;
+}
+
+.container input:checked ~ .checkbox {
+    background-color: #d3bb89;
+}
+
+.checkbox:after {
+    content: "";
+    position: absolute;
+    display: block;
+}
+
+.container input:checked ~ .checkbox:after {
+    display: none;
+}
+
+.container .checkbox:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
 

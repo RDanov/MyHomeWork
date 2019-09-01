@@ -104,6 +104,7 @@ nav li {
 .wrapper .content .content_top .column_right .buy_now {
     color: #fff;
     background-color: #16a085;
+    cursor: pointer;
     position: relative;
     padding: 5px;
     border-radius: 5px;
@@ -171,6 +172,7 @@ nav li {
 .wrapper .content .content_bottom .form_question .button_submit {
     color: #fff;
     background-color: #1abc9c;
+    cursor: pointer;
     width: 250px;
     height: 60px;
     padding: 5px;
