@@ -28,7 +28,7 @@ body {
 .wrapper .column .title {
     color: #d3bb89;
     font-size: 40px;
-    font-family: Game of Thrones;
+    font-family: Game of Thrones, serif;
     text-transform: uppercase;
     margin-top: 50px;
     position: relative;
