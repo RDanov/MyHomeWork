@@ -29,21 +29,15 @@ body {
     margin-left: 0;
     text-align: center;
     position: relative;
-
 }
-
 
 .wrapper .column .title {
     color: #d3bb89;
     font-size: 40px;
-    font-family: "Game of Thrones", serif;
+    font-family: Game of Thrones;
     text-transform: uppercase;
     margin-top: 50px;
     position: relative;
-}
-
-.menu_of_game {
-
 }
 
 .sub_title {

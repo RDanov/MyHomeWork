@@ -19,7 +19,6 @@ body {
 .content {
     display: flex;
     border: 5px solid #ff3366;
-    /*height: 3000px;*/
 }
 
 .content .column {
@@ -38,13 +37,11 @@ body {
 .content .column:first-of-type {
     background-color: #16a085;
     flex-grow: 1;
-
 }
 
 .content .column:last-of-type {
     background-color: #2980b9;
     flex-grow: 3;
-
 }
 
 .footer {

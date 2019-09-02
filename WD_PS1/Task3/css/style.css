@@ -21,7 +21,6 @@ strong {
 }
 
 .wrapper .header .column_left {
-
     flex-grow: 1;
     text-align: center;
     left: 40px;
@@ -64,10 +63,8 @@ nav li {
 
 .wrapper .content .content_top {
     display: flex;
-
     height: 800px;
     background-color: #16a085;
-
 }
 
 .wrapper .content_top .column_left {
@@ -178,7 +175,7 @@ nav li {
     padding: 5px;
     border-radius: 5px;
     border: 2px solid #fff;
-    font-size: 20px;
+    font-size: 25px;
     margin-top: 15px;
     justify-content: center;
 }
