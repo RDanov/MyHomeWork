@@ -2,24 +2,18 @@ body {
 }
 
 .wrapper {
-    margin-top: 30px;
     width: 100%;
     display: flex;
+    height: 100%;
 }
 
 .wrapper .column {
     flex-grow: 1;
-    height: 750px;
 }
 
 .wrapper .column:first-of-type {
     flex-grow: 1;
     width: 50%;
-}
-
-.image {
-    height: 750px;
-
 }
 
 .wrapper .column:last-of-type {
