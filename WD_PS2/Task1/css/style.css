@@ -1,88 +1,59 @@
 body {
-    margin: 0;
+    margin: 50px;
 }
 
 * {
     box-sizing: border-box;
 }
 
-.column {
-    font-size: 4rem;
-    color: white;
+.container {
+    height: fit-content;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    vertical-align: baseline;
+    text-align: justify;
+    align-content: baseline;
+    justify-content: space-evenly;
+}
+
+.title {
+    font-size: 80px;
+    color: dodgerblue;
     font-weight: bold;
     font-family: Helvetica, sans-serif;
     text-align: center;
-}
-
-.floats {
-    overflow: hidden;
-    width: 100%;
-}
-
-.floats .column {
-    background-color: #2ecc71;
-    float: left;
-    width: calc(100% / 3);
-}
-
-.floats .column:first-of-type {
-    background-color: #1abc9c;
-}
-
-.floats .column:last-of-type {
-    background-color: #3498db;
-}
-
-.blocks .column {
-    display: inline-block;
-    width: calc(100% / 3);
-    background-color: #d35400;
-    margin-right: -4px;
-}
-
-.blocks .column:first-of-type {
-    background-color: #f39c12;
-}
-
-.blocks .column:last-of-type {
-    background-color: #c0392b;
-}
-
-.flexbox {
-    display: flex;
-    justify-content: space-between;
-}
-
-.flexbox .column {
-    background-color: #27ae60;
     flex-grow: 1;
 }
 
-.flexbox .column:first-of-type {
-    background-color: #16a085;
+.title_of_input {
+    margin: 40px 0 40px 0;
+    font-size: 40px;
+    color: deepskyblue;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
     flex-grow: 1;
-
 }
 
-.flexbox .column:last-of-type {
-    background-color: #2980b9;
-    flex-grow: 1;
+.my_input {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: deepskyblue;
+    width: 300px;
+    height: 40px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
 }
 
-.grid {
-    display: grid;
-    /*grid-template-columns: 1fr 1fr 1fr;*/
-    grid-template-areas: "column column column";
-}
-
-.grid .column {
-    background-color: #e67e22;
-}
-
-.grid .column:first-of-type {
-    background-color: #f1c40f;
-}
-
-.grid .column:last-of-type {
-    background-color: #e74c3c;
+.answer {
+    margin-top: 50px;
+    font-size: 30px;
+    color: blue;
+    font-weight: bold;
+    font-family: Helvetica, sans-serif;
+    text-align: center;
 }
