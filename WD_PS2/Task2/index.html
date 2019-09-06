@@ -2,9 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/calc.js"></script>
+    <title>Task2</title>
 </head>
 <body>
-
+<div class="container">
+    <h1 class="title">time conversion</h1>
+    <h3 class="title_of_input">enter time in seconds</h3>
+    <input type="number" name="time_in_second" placeholder="enter time in second" class="my_input">
+    <h2 class="answer">time in format hh:mm:ss is</h2>
+    <input class="button_calculate" type="submit" value="Calculate!">
+    <h3 class="title_of_input">enter time in format hh:mm:ss</h3>
+    <input type="number" name="time_in_hours" placeholder="enter time in format hh:mm:ss" class="my_input">
+    <h2 class="answer">time in seconds is</h2>
+    <input class="button_calculate" type="submit" value="Calculate!">
+    <output name="answer" class="result"></output>
+</div>
 </body>
 </html>
