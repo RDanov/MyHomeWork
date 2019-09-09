@@ -74,6 +74,9 @@ nav li {
 .wrapper .content_top .column_left {
     margin-top: 100px;
     width: 50%;
+    display: flex;
+    padding-right: 10%;
+    justify-content: flex-end;
 }
 
 .wrapper .content_top .column_left .image {
@@ -123,8 +126,6 @@ nav li {
 
 .image {
     height: 600px;
-    position: absolute;
-    margin: 0 0 0 300px;
 }
 
 .wrapper .content .content_top .column:last-of-type {
