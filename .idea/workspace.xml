@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="72b2884f-81e6-4ed7-829c-808c26be611d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/WD_PS2/Table_task/index.html" afterDir="false" />
+    <list default="true" id="72b2884f-81e6-4ed7-829c-808c26be611d" name="Default Changelist" comment="wd_ps2 forms are created i the task1-task6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/WD_PS2/Task1/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS2/Task1/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/WD_PS2/Task1/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS2/Task1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WD_PS2/Task1/js/calc.js" beforeDir="false" afterPath="$PROJECT_DIR$/WD_PS2/Task1/js/calc.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,16 +39,17 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rdanov\PhpstormProjects\HomeWork\GoT" />
+      <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task4" />
+      <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task3\CSS" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\rdanov\PhpstormProjects\HomeWork\WD_PS2\Table_task" />
       <recent name="C:\Users\rdanov\PhpstormProjects\HomeWork\WD_PS2\Task1\CSS" />
       <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task4\fonts" />
       <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task4\css\img" />
       <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task4" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task4" />
-      <recent name="C:\Users\Roman\PhpstormProjects\MyHomeWork\WD_PS1\Task3\CSS" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -74,19 +74,22 @@
     <configuration name="index.html (3)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/MyHomeWork/WD_PS1/Task3/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
-    <configuration name="index.html (4)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HomeWork/WD_PS1/Task4/index.html" useBuiltInWebServerPort="true">
+    <configuration name="index.html (4)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HomeWork/WD_PS2/Task1/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
     <configuration name="index.html (5)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HomeWork/WD_PS1/Task3/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/HomeWork/GoT/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JavaScript Debug.index.html (4)" />
         <item itemvalue="JavaScript Debug.index.html (4)" />
         <item itemvalue="JavaScript Debug.index.html (5)" />
         <item itemvalue="JavaScript Debug.index.html (3)" />
         <item itemvalue="JavaScript Debug.index.html (1)" />
-        <item itemvalue="JavaScript Debug.index.html (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -124,6 +127,7 @@
       <workItem from="1567419658255" duration="4430000" />
       <workItem from="1567495721604" duration="1260000" />
       <workItem from="1567669223700" duration="11043000" />
+      <workItem from="1568099098184" duration="14875000" />
     </task>
     <task id="LOCAL-00001" summary="layout of blocks using the float and grid commands is completed">
       <created>1565704886933</created>
@@ -272,7 +276,14 @@
       <option name="project" value="LOCAL" />
       <updated>1567672877922</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="corrections notes on homework WD_PS1">
+      <created>1568111837809</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1568111837809</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView">
@@ -332,6 +343,7 @@
     <MESSAGE value="task 4 minor flaws fixed" />
     <MESSAGE value="WD_PS2 in task 1 added file index.html" />
     <MESSAGE value="WD_PS2 in task 1 added file reset.css, style.css and directory css" />
-    <option name="LAST_COMMIT_MESSAGE" value="WD_PS2 in task 1 added file reset.css, style.css and directory css" />
+    <MESSAGE value="corrections notes on homework WD_PS1" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrections notes on homework WD_PS1" />
   </component>
 </project>
