@@ -39,5 +39,5 @@ function sumOfNumbers() {
         }
     }
     alert(summ_of_numbers);
-    // output.innerText = secondNumber;
+     output.innerText = secondNumber;
 }
