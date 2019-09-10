@@ -1,19 +1,28 @@
 body {
 }
 
+@font-face {
+    font-family: "GoT";
+    src: url("../fonts/Game of Thrones.ttf");
+}
+
+
 .wrapper {
     width: 100%;
     display: flex;
     height: 100%;
 }
 
-.wrapper .column {
-    flex-grow: 1;
-}
-
 .wrapper .column:first-of-type {
+    display: flex;
     flex-grow: 1;
     width: 50%;
+    justify-content: flex-end;
+    margin-right: 0;
+}
+
+.image {
+    width: 100%;
 }
 
 .wrapper .column:last-of-type {
@@ -22,24 +31,26 @@ body {
     background-color: #202020;
     margin-left: 0;
     text-align: center;
-    position: relative;
 }
 
 .wrapper .column .title {
     color: #d3bb89;
-    font-size: 40px;
-    font-family: Game of Thrones, serif;
+    font-size: 35px;
+    font-family: GoT, serif;
     text-transform: uppercase;
-    margin-top: 50px;
-    position: relative;
+    margin-top: 45px;
+}
+
+.menu_of_game {
+
 }
 
 .sub_title {
     color: #fef8eb;
     font-family: sans-serif;
-    font-size: 20px;
-    margin-top: 50px;
-    margin-left: 180px;
+    font-size: 16px;
+    margin-top: 45px;
+    margin-left: 20%;
     padding-left: 40px;
     border-left: solid 3px #d3bb89;
     position: relative;
@@ -49,8 +60,8 @@ body {
 .column .menu_of_game .font_of_menu {
     color: #d3bb89;
     font-family: Garamond, serif;
-    font-size: 30px;
-    margin-left: 180px;
+    font-size: 25px;
+    margin-left: 20%;
     margin-top: 30px;
     text-align: left;
     position: relative;
@@ -59,55 +70,62 @@ body {
 .column .menu_of_game .font_of_submenu {
     color: #fef8eb;
     font-family: sans-serif;
-    font-size: 15px;
-    margin-left: 180px;
+    font-size: 14px;
+    margin-left: 20%;
     text-align: left;
     position: relative;
 }
 
 .save {
     margin-top: 50px;
-    width: 500px;
+    width: 60%;
+    margin-right: 20%;
+    margin-left: 20%;
     height: 50px;
     color: #fef8eb;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 16px;
     background-color: #c19a49;
     border: none;
-    margin-left: 20px;
 }
 
 .input {
-    position: relative;
+    display: flex;
+    width: 60%;
     text-align: left;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 .input_username {
-    width: 500px;
+    display: flex;
+    width: 100%;
     background-color: #202020;
-    font-size: 20px;
+    font-size: 16px;
     justify-content: left;
     border: none;
     padding: 20px 0 20px 0;
     border-bottom: solid 3px #d3bb89;
-    margin-left: 180px;
+
 }
 
 .select {
-    position: relative;
     text-align: left;
+    width: 100%;
 }
 
 .select_house {
+    display: flex;
     color: #fef8eb;
-    width: 500px;
+    width: 60%;
     background-color: #202020;
-    font-size: 20px;
-    justify-content: left;
+    font-size: 16px;
+    justify-content: center;
     border: none;
     padding: 20px 0 20px 0;
     border-bottom: solid 3px #d3bb89;
-    margin-left: 180px;
+    margin-left: 20%;
+    margin-right: 20%;
     margin-bottom: 40px;
 }
 
@@ -115,15 +133,13 @@ body {
     color: #d3bb89;
     display: flex;
     position: relative;
-    padding-left: 35px;
+    padding-left: 20%;
     margin-top: 25px;
-    margin-left: 180px;
     cursor: pointer;
     font-size: 22px;
 }
 
 .container input {
-    position: absolute;
     opacity: 0;
     cursor: pointer;
     height: 0;
@@ -131,7 +147,6 @@ body {
 }
 
 .checkbox {
-    position: absolute;
     top: 0;
     left: 0;
     height: 25px;
@@ -150,7 +165,6 @@ body {
 
 .checkbox:after {
     content: "";
-    position: absolute;
     display: block;
 }
 
@@ -159,9 +173,9 @@ body {
 }
 
 .container .checkbox:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
+    left: 22px;
+    top: 33px;
+    width: 15px;
     height: 10px;
     border: solid white;
     border-width: 0 3px 3px 0;
