@@ -11,25 +11,25 @@ function sumOfNumbers() {
     const parent = document.querySelector('.container');
 
     if (!parent) {
-        alert("enter numbers please");
+        alert("enter 2 integers please");
         return;
     }
 
     const elements = [...parent.querySelectorAll('.my_input')];
     if (!elements || elements.length < 2) {
-        alert("enter numbers please");
+        alert("enter 2 integers please");
         return;
     }
 
     const firstNumber = +elements[0].value;
     const secondNumber = +elements[1].value;
-    if (firstNumber.isInteger || secondNumber.isInteger) {
-        alert("enter numbers please");
+    if (!Number.isInteger(firstNumber) || !Number.isInteger(secondNumber)) {
+        alert("enter 2 integers please");
         return;
     }
     const output = document.querySelector('.result');
     if (!output) {
-        alert("enter numbers please");
+        alert("enter 2 integers please");
         return;
     }
     let summ_of_numbers = 0;
