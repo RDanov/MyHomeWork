@@ -1,5 +1,5 @@
 body {
-    margin: 50px;
+    margin: 10px;
 }
 
 * {
@@ -19,7 +19,7 @@ body {
 }
 
 .title {
-    font-size: 80px;
+    font-size: 60px;
     color: dodgerblue;
     font-weight: bold;
     font-family: Helvetica, sans-serif;
@@ -28,8 +28,8 @@ body {
 }
 
 .title_of_input {
-    margin: 40px 0 40px 0;
-    font-size: 40px;
+    margin: 30px 0 30px 0;
+    font-size: 30px;
     color: deepskyblue;
     font-weight: bold;
     font-family: Helvetica, sans-serif;
@@ -55,19 +55,19 @@ body {
     background-color: darkgrey;
     color: #3498db;
     cursor: pointer;
-    width: 400px;
-    height: 80px;
+    width: 350px;
+    height: 70px;
     padding: 5px;
     border-radius: 5px;
     border: 2px solid #fff;
-    font-size: 55px;
+    font-size: 50px;
     font-weight: bolder;
-    margin-top: 50px;
+    margin-top: 40px;
     justify-content: center;
 }
 
 .answer {
-    margin-top: 50px;
+    margin-top: 40px;
     font-size: 30px;
     color: blue;
     font-weight: bold;
