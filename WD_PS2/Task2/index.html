@@ -10,14 +10,15 @@
 <div class="container">
     <h1 class="title">time conversion</h1>
     <h3 class="title_of_input">enter time in seconds</h3>
-    <input type="number" name="time_in_second" placeholder="enter time in second" class="my_input">
-    <input class="button_calculate" type="submit" value="Calculate!">
+    <input type="number" id="firstInput" name="time_in_second" placeholder="enter time in second" class="my_input">
+    <input class="button_calculate" id="button_first" type="submit" value="Calculate!">
     <h2 class="answer">time in format hh:mm:ss is</h2>
+    <p id="firstResult" class="result"></p>
     <h3 class="title_of_input">enter time in format hh:mm:ss</h3>
-    <input type="number" name="time_in_hours" placeholder="enter time in format hh:mm:ss" class="my_input">
-    <input class="button_calculate" type="submit" value="Calculate!">
+    <input type="text" id="secondInput" name="time_in_hours" placeholder="enter time in format hh:mm:ss" class="my_input">
+    <input class="button_calculate" id="button_second" type="submit" value="Calculate!">
     <h2 class="answer">time in seconds is</h2>
-    <output name="answer" class="result"></output>
+    <p id="secondResult" class="result"></p>
 </div>
 <script src="js/calc.js"></script>
 </body>
