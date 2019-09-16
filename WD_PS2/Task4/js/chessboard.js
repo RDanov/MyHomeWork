@@ -43,15 +43,16 @@ function drawChessBoard() {
     // chessBoard.border = 2;
     const sizeOfBlock = +(chessBoard.width / horizontalQuantity);
     chessBoard.height = +(verticalQuantity * sizeOfBlock);
-    let flag = 1;
+    let flag = true;
     for (let i = 0; i < verticalQuantity; i++) {
-        for (let j = 0; j < horizontalQuantity / 2; j++) {
-            if (flag > 0) {
-                ctx.fillRect(2 * j * sizeOfBlock, i * sizeOfBlock, sizeOfBlock, sizeOfBlock)
+        for (let j = 0; j < horizontalQuantity; j++) {
+            if (flag) {
+                ctx.fillRect(j * sizeOfBlock, i * sizeOfBlock, sizeOfBlock, sizeOfBlock)
             } else {
-                ctx.fillRect((2 * j + 1) * sizeOfBlock, i * sizeOfBlock, sizeOfBlock, sizeOfBlock)
+                ctx.strokeRect(j * sizeOfBlock, i * sizeOfBlock, sizeOfBlock, sizeOfBlock)
             }
+            flag = !flag;
         }
-        flag = -flag;
+        if (horizontalQuantity % 2 == 0) flag = !flag;
     }
 }
