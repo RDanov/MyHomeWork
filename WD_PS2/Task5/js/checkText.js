@@ -15,7 +15,7 @@ function checkAndSorting(links) {
     }
 
     let elements = links.split(',');
-    for (let i = elements.length; i >= 0; i--) {
+    for (let i = elements.length - 1; i >= 0; i--) {
 
         if (!checkIPorAddress(elements[i])) {
             elements.splice(i, 1);
@@ -26,30 +26,35 @@ function checkAndSorting(links) {
         alert("no addresses and links");
         return;
     }
+    elements.sort();
     const output = document.querySelector('.result');
-    let outputText;
+    let outputText = "";
 
     for (let i = 0; i < elements.length - 1; i++) {
         outputText += elements[i] + ", ";
     }
     outputText += elements[elements.length - 1];
-    // if (!outputText) outputText = ;
     output.innerText = outputText;
 }
 
 function checkIPorAddress(element) {
-    if (checkIP(element))
+    if (checkIP(element) || checkAddress(element))
         return true;
 }
 
 function checkIP(ipAddress) {
+    let element;
+    element = ipAddress.split('.');
+    if (element.length === 4 || element.length === 6) {
+        for (let i = 0; i < element.length; i++) {
+            if (!element[i] || element[i] > 255) return false;
+        }
+        return true;
+    } else {
+        return false;
+    }
+}
 
-    // ipAddress = ipAddress.split('.');
-    // // if (ipAddress.length != 4 || ipAddress.length != 6) return false;
-    // for (i = 0; i < ipAddress.length; i++) {
-    //     if (!ipAddress[i] || ipAddress[i] > 255) return false;
-    // }
-
-    return true;
+function checkAddress(address) {
 
 }
