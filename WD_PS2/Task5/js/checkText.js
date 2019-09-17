@@ -1,9 +1,13 @@
 window.onload = function () {
     const textArea = document.querySelector('.link_and_ip');
+    const outputArea = document.querySelector('.result');
     textArea.addEventListener('blur', (e) => {
         console.log(e.target);
         const links = e.target.value;
         checkAndSorting(links);
+    })
+    outputArea.addEventListener('click', (e) =>{
+        window.open();
     })
 };
 
@@ -15,11 +19,14 @@ function checkAndSorting(links) {
     }
 
     let elements = links.split(',');
+    const regReplace =  /^(https?:\/\/)/;
     for (let i = elements.length - 1; i >= 0; i--) {
-
         if (!checkIPorAddress(elements[i])) {
             elements.splice(i, 1);
+        } else {
+            elements[i] = elements[i].replace(regReplace, '');
         }
+
     }
 
     if (elements.length === 0) {
@@ -38,7 +45,7 @@ function checkAndSorting(links) {
 }
 
 function checkIPorAddress(element) {
-    if (checkIP(element) || checkAddress(element))
+    if (checkIP(element) || checkLink(element))
         return true;
 }
 
@@ -55,6 +62,7 @@ function checkIP(ipAddress) {
     }
 }
 
-function checkAddress(address) {
-
+function checkLink(link) {
+    let myRegExp = /^(https?:\/\/)?([\w\.]+)\.([a-z]{2,6}\.?)(\/[\w\.]*)*\/?$/;
+    return myRegExp.test(link);
 }
