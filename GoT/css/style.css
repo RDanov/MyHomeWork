@@ -10,7 +10,10 @@ body {
 .wrapper {
     width: 100%;
     display: flex;
+    flex-direction: row;
+    flex-grow: 1;
     height: 100%;
+
 }
 
 .wrapper .column:first-of-type {
@@ -106,7 +109,7 @@ body {
     border: none;
     padding: 20px 0 20px 0;
     border-bottom: solid 3px #d3bb89;
-
+    color: #d3bb89;
 }
 
 .select {
