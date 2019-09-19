@@ -1,0 +1,24 @@
+body {
+
+}
+
+.container {
+    margin-top: 2rem
+}
+
+.container .panel {
+    width: 600px;
+}
+
+.field-is-horizontal {
+    width: 100%
+}
+
+.select {
+    width: 100%;
+}
+
+.select-filter {
+    width: 100%;
+}
+
