@@ -1,5 +1,6 @@
 body {
     margin: 0;
+
 }
 
 * {
@@ -19,19 +20,20 @@ body {
 .content {
     display: flex;
     border: 5px solid #ff3366;
+    height: 1000px;
+    overflow: hidden;
 }
 
 .content .column {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    align-items: stretch;
-    align-content: stretch;
     font-size: 5rem;
     color: blue;
     font-weight: bold;
     font-family: Helvetica, sans-serif;
     text-align: center;
+    height: 100%;
 }
 
 .content .column:first-of-type {
