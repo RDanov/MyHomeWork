@@ -185,10 +185,11 @@ nav li {
 }
 
 .wrapper .content .content_bottom .form_question .button_submit {
+    display: flex;
     color: #fff;
     background-color: #1abc9c;
     cursor: pointer;
-    width: 250px;
+    width: 20%;
     height: 60px;
     padding: 5px;
     border-radius: 5px;
@@ -196,6 +197,10 @@ nav li {
     font-size: 25px;
     margin-top: 15px;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 40%;
+    margin-right: 60%;
 }
 
 .myInput {
@@ -209,4 +214,6 @@ nav li {
     width: 800px;
     height: 200px;
     vertical-align: text-top;
+    margin-bottom: 15px;
+
 }
