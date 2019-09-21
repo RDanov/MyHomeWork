@@ -2,7 +2,7 @@ body {
 }
 
 @font-face {
-    font-family: "GoT";
+    font-family: "EBGaramond";
     src: url("../fonts/Game of Thrones.ttf");
 }
 
@@ -12,7 +12,7 @@ body {
     display: flex;
     flex-direction: row;
     flex-grow: 1;
-    height: -webkit-fill-available;
+    height: 100vh;
 
 }
 
@@ -22,26 +22,28 @@ body {
     width: 50%;
     justify-content: flex-end;
     margin-right: 0;
+    background-image: url("img/maxresdefault.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
-.image {
-    width: 100%;
-}
 
 .wrapper .column:last-of-type {
-    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
     width: 50%;
     background-color: #202020;
     margin-left: 0;
     text-align: center;
+    justify-content: center;
 }
 
 .wrapper .column .title {
     color: #d3bb89;
     font-size: 35px;
-    font-family: GoT, serif;
+    font-family: EBGaramond, "Open Sans";
     text-transform: uppercase;
-    margin-top: 45px;
+    margin-bottom: 10%;
 }
 
 .menu_of_game {
@@ -52,7 +54,6 @@ body {
     color: #fef8eb;
     font-family: sans-serif;
     font-size: 16px;
-    margin-top: 45px;
     margin-left: 20%;
     padding-left: 40px;
     border-left: solid 3px #d3bb89;
@@ -65,9 +66,8 @@ body {
     font-family: Garamond, serif;
     font-size: 25px;
     margin-left: 20%;
-    margin-top: 30px;
     text-align: left;
-    position: relative;
+    /*position: relative;*/
 }
 
 .column .menu_of_game .font_of_submenu {
@@ -80,11 +80,11 @@ body {
 }
 
 .save {
-    margin-top: 50px;
+    margin-top: 10%;
     width: 60%;
     margin-right: 20%;
     margin-left: 20%;
-    height: 50px;
+    height: 10%;
     color: #fef8eb;
     cursor: pointer;
     font-size: 16px;
