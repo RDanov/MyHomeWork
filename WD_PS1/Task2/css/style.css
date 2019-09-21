@@ -1,6 +1,5 @@
 body {
-    margin: 0;
-
+    height: 100%;
 }
 
 * {
@@ -15,13 +14,13 @@ body {
     font-weight: bold;
     font-family: Helvetica, sans-serif;
     text-align: center;
+    height: 15%;
 }
 
 .content {
     display: flex;
     border: 5px solid #ff3366;
-    height: 85vh;
-    overflow: hidden;
+    height: 70%;
 }
 
 .content .column {
@@ -33,17 +32,19 @@ body {
     font-weight: bold;
     font-family: Helvetica, sans-serif;
     text-align: center;
-    height: 100%;
+    margin-bottom: 7%;
 }
 
 .content .column:first-of-type {
     background-color: #16a085;
     flex-grow: 1;
+    min-height: 71vh;
 }
 
 .content .column:last-of-type {
     background-color: #2980b9;
     flex-grow: 3;
+    min-height: 71vh;
 }
 
 .footer {
@@ -57,4 +58,5 @@ body {
     font-weight: bold;
     font-family: Helvetica, sans-serif;
     text-align: center;
+    height: 15%;
 }
