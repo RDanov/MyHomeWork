@@ -36,3 +36,19 @@ const GOODS = [
         price: 3
     }
 ];
+function sortingTableUp(numberColumn) {
+    let sortedTable = Array.from(table.rows)
+        .slice(1, table.rows.length-1)
+        .sort((rowA, rowB) => rowA.cells[numberColumn].innerHTML > rowB.cells[numberColumn].innerHTML ? 1 : -1);
+    table.tBodies[0].append(...sortedTable);
+}
+
+function sortingTableDown(numberColumn) {
+    let sortedTable = Array.from(table.rows)
+        .slice(1, table.rows.length-1)
+        .sort((rowA, rowB) => rowA.cells[numberColumn].innerHTML < rowB.cells[numberColumn].innerHTML ? 1 : -1);
+    table.tBodies[0].append(...sortedTable);
+}
+
+sortingTableDown(0);
+
