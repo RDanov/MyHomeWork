@@ -2,10 +2,11 @@ body {
     height: 100%;
 }
 
-* {
-    box-sizing: border-box;
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
 }
-
 .header {
     border: 5px solid #ff3366;
     background-color: #1abc9c;
@@ -20,7 +21,9 @@ body {
 .content {
     display: flex;
     border: 5px solid #ff3366;
-    height: 70%;
+    flex-direction: row;
+    flex: 1 0 auto;
+
 }
 
 .content .column {
@@ -32,25 +35,20 @@ body {
     font-weight: bold;
     font-family: Helvetica, sans-serif;
     text-align: center;
-    margin-bottom: 7%;
 }
 
 .content .column:first-of-type {
     background-color: #16a085;
     flex-grow: 1;
-    min-height: 71vh;
 }
 
 .content .column:last-of-type {
     background-color: #2980b9;
     flex-grow: 3;
-    min-height: 71vh;
 }
 
 .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+    flex-shrink: 0;
     border: 5px solid #ff3366;
     background-color: #1abc9c;
     font-size: 5rem;
