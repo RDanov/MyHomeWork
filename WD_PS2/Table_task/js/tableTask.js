@@ -51,8 +51,7 @@ for (let i = 0; i < countGoods; i++) {
     let tr = document.createElement('tr');
     for (let j = 0; j < 4; j++) {
         let td = document.createElement('td');
-        let item = GOODS[i][items[j]];
-        td.innerHTML = item;
+        td.innerHTML = GOODS[i][items[j]];
         tr.appendChild(td);
     }
     tbody.appendChild(tr);
@@ -65,7 +64,7 @@ window.onload = function () {
     const sortingByCategory = document.getElementById('title-category');
     const sortingByName = document.getElementById('title-name');
     // const search
-
+    calculateSumm();
     document.getElementById('select').addEventListener('change', e => {
         const selectValue = document.getElementById('select');
         filterTable(selectValue.value);
@@ -73,6 +72,8 @@ window.onload = function () {
 
     document.getElementById('inputOfSearch').addEventListener('input', e => {
         let searchName = document.getElementById('inputOfSearch');
+        filterTableBySearch(searchName.value);
+
     });
     let e = document.getElementById('select');
 
@@ -98,6 +99,14 @@ window.onload = function () {
 };
 
 function calculateSumm() {
+    const outputTotal = document.getElementById('total');
+    let summTotal = 0;
+    const table = document.getElementById("table");
+    for (let i = 1; i < table.rows.length - 1; i++) {
+        let row = table.rows[i];
+        summTotal = summTotal + (+row.cells[2].innerHTML * (+row.cells[3].innerHTML));
+    }
+    outputTotal.innerHTML = summTotal;
 
 }
 
@@ -138,13 +147,30 @@ function sortingTableDown(numberColumn) {
 }
 
 function filterTable(string) {
-    alert(GOODS.length);
-    let filterTable = Array.from(table.rows)
-        .slice(1, table.rows.length - 1)
-        .filter((string == rowA.cells[0]));
+    const table = document.getElementById("table");
+    let i = 1;
+    while (table.rows[i]) {
+        let filter = table.rows[i].cells[0].innerHTML;
+        if (!string.toLowerCase().includes(filter.toLowerCase())) {
+            table.rows[i].remove();
+            i--;
+        }
+        i++;
+    }
+}
 
-    table.tBodies[0].append(...sortedTable);
-
+function filterTableBySearch(string) {
+    alert(string);
+    const table = document.getElementById("table");
+    let i = 1;
+    while (table.rows[i]) {
+        let filter = table.rows[i].cells[1].innerHTML;
+        if (!filter.toLowerCase().includes(string.toLowerCase()) && (i != (table.rows.length - 1))) {
+            table.rows[i].remove();
+            i--;
+        }
+        i++;
+    }
 }
 
 
