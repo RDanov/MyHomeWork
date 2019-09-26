@@ -116,7 +116,7 @@ function calculateSumm() {
         let row = table.rows[i];
         summTotal = summTotal + (+row.cells[2].innerHTML * (+row.cells[3].innerHTML));
     }
-    outputTotal.innerHTML = summTotal;
+    outputTotal.innerHTML = summTotal + " $";
 }
 
 function sortingTableUp(numberColumn) {
