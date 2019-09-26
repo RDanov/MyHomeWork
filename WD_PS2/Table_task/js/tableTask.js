@@ -178,7 +178,7 @@ function filterTableBySearch(string) {
     let i = 1;
     for (let i = table.rows.length - 2; i > 0; i--) {
         let filter = table.rows[i].cells[1].innerHTML;
-        if (!filter.toLowerCase().includes(string.toLowerCase())) {
+        if (!filter.toLowerCase().startsWith(string.toLowerCase())) {
             table.rows[i].remove();
         }
     }
