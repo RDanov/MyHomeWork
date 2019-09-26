@@ -40,42 +40,27 @@ const GOODS = [
     }
 ];
 
-let countGoods = GOODS.length;
-let table = document.getElementById('table');
-
-let tbody = document.createElement('tbody');
-let tr = document.createElement('tr');
-
-let items = ['category', 'name', 'amount', 'price'];
-for (let i = 0; i < countGoods; i++) {
-    let tr = document.createElement('tr');
-    for (let j = 0; j < 4; j++) {
-        let td = document.createElement('td');
-        td.innerHTML = GOODS[i][items[j]];
-        tr.appendChild(td);
-    }
-    tbody.appendChild(tr);
-}
-
-table.appendChild(tbody);
-
 
 window.onload = function () {
+    drawTable();
+    calculateSumm();
     const sortingByCategory = document.getElementById('title-category');
     const sortingByName = document.getElementById('title-name');
     // const search
-    calculateSumm();
+
     document.getElementById('select').addEventListener('change', e => {
-        const selectValue = document.getElementById('select');
-        filterTable(selectValue.value);
+        drawTable();
+        filterTable(document.getElementById('select').value);
+        filterTableBySearch(document.getElementById('inputOfSearch').value);
+        calculateSumm();
     });
 
     document.getElementById('inputOfSearch').addEventListener('input', e => {
-        let searchName = document.getElementById('inputOfSearch');
-        filterTableBySearch(searchName.value);
-
+        drawTable();
+        filterTable(document.getElementById('select').value);
+        filterTableBySearch(document.getElementById('inputOfSearch').value);
+        calculateSumm();
     });
-    let e = document.getElementById('select');
 
 
     sortingByCategory.addEventListener('click', e => {
@@ -98,6 +83,31 @@ window.onload = function () {
     })
 };
 
+function drawTable() {
+
+    let countGoods = GOODS.length;
+    let table = document.getElementById('table');
+    if (table.rows.length > 2) {
+        for (let i = table.rows.length - 2; i > 0; i--) {
+            table.rows[i].remove();
+        }
+    }
+    let tbody = document.createElement('tbody');
+    let tr = document.createElement('tr');
+    let items = ['category', 'name', 'amount', 'price'];
+
+    for (let i = 0; i < countGoods; i++) {
+        let tr = document.createElement('tr');
+        for (let j = 0; j < 4; j++) {
+            let td = document.createElement('td');
+            td.innerHTML = GOODS[i][items[j]];
+            tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+    }
+    table.appendChild(tbody);
+}
+
 function calculateSumm() {
     const outputTotal = document.getElementById('total');
     let summTotal = 0;
@@ -107,7 +117,6 @@ function calculateSumm() {
         summTotal = summTotal + (+row.cells[2].innerHTML * (+row.cells[3].innerHTML));
     }
     outputTotal.innerHTML = summTotal;
-
 }
 
 function sortingTableUp(numberColumn) {
@@ -147,29 +156,31 @@ function sortingTableDown(numberColumn) {
 }
 
 function filterTable(string) {
+    if (string === '') {
+        drawTable();
+        return
+    }
     const table = document.getElementById("table");
-    let i = 1;
-    while (table.rows[i]) {
-        let filter = table.rows[i].cells[0].innerHTML;
+    let index = 1;
+    for (let i = table.rows.length - 2; i > 0; i--) {
+
+        let filter = table.rows[index].cells[0].innerHTML;
         if (!string.toLowerCase().includes(filter.toLowerCase())) {
-            table.rows[i].remove();
-            i--;
+            table.rows[index].remove();
+            index--;
         }
-        i++;
+        index++;
     }
 }
 
 function filterTableBySearch(string) {
-    alert(string);
     const table = document.getElementById("table");
     let i = 1;
-    while (table.rows[i]) {
+    for (let i = table.rows.length - 2; i > 0; i--) {
         let filter = table.rows[i].cells[1].innerHTML;
-        if (!filter.toLowerCase().includes(string.toLowerCase()) && (i != (table.rows.length - 1))) {
+        if (!filter.toLowerCase().includes(string.toLowerCase())) {
             table.rows[i].remove();
-            i--;
         }
-        i++;
     }
 }
 
