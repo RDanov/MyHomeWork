@@ -27,7 +27,7 @@ strong {
     letter-spacing: 1px;
 }
 
-.wrapper .header .column_left {
+.wrapper .header .column-left {
     flex-grow: 1;
     text-align: center;
     left: 40px;
@@ -68,14 +68,14 @@ nav li {
     flex-direction: column;
 }
 
-.wrapper .content .content_top {
+.wrapper .content .content-top {
     display: flex;
     height: 100vh;
     background-color: #16a085;
 
 }
 
-.wrapper .content_top .column_left {
+.wrapper .content-top .column-left {
     width: 50%;
     display: flex;
     padding-right: 10%;
@@ -83,14 +83,14 @@ nav li {
     align-items: center;
 }
 
-.wrapper .content_top .column_left .image {
+.wrapper .content-top .column-left .image {
     margin-right: 10px;
     overflow: hidden;
     height: auto;
     width: 50%;
 }
 
-.wrapper .content .content_top .column_right {
+.wrapper .content .content-top .column-right {
     display: flex;
     flex-direction: column;
     color: #fff;
@@ -104,19 +104,19 @@ nav li {
     justify-content: space-evenly;
 }
 
-.wrapper .content .content_top .column_right .top_content_header {
+.wrapper .content .content-top .column-right .content-top-header {
     font-size: 45px;
     position: relative;
     flex-grow: 1;
 }
 
-.wrapper .content .content_top .column_right .top_content {
+.wrapper .content .content-top .column-right .top-content {
     position: relative;
     margin-top: 100px;
     flex-grow: 1;
 }
 
-.wrapper .content .content_top .column_right .buy_now {
+.wrapper .content .content-top .column-right .button-buy-now {
     color: #fff;
     background-color: #16a085;
     cursor: pointer;
@@ -131,13 +131,13 @@ nav li {
 }
 
 
-.wrapper .content .content_top .column:last-of-type {
+.wrapper .content .content-top .column:last-of-type {
     color: #fff;
     text-align: justify;
     width: 50%;
 }
 
-.wrapper .content .content_center {
+.wrapper .content .content-center {
     display: flex;
     flex-direction: row;
     height: 100vh;
@@ -146,7 +146,7 @@ nav li {
 
 }
 
-.wrapper .content .content_center .column {
+.wrapper .content .content-center .column {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -163,16 +163,16 @@ nav li {
     width: 140px;
 }
 
-.content_header {
+.content-header {
     font-size: 40px;
     margin-top: 200px;
 }
 
-.column_content {
+.column-content {
     font-size: 28px;
 }
 
-.wrapper .content .content_bottom {
+.wrapper .content .content-bottom {
     background-color: #1abc9c;
     height: auto;
     width: 100%;
@@ -203,7 +203,7 @@ nav li {
     text-align: center;
 }
 
-.myInput {
+.my-input {
     width: 50%;
     height: 40px;
     margin-left: 25%;
@@ -221,6 +221,7 @@ nav li {
     margin-left: 25%;
     margin-right: 25%;
     font-size: 15px;
+    resize: none;
 }
 
 .checkbox {
@@ -256,4 +257,8 @@ nav li {
     justify-content: space-between;
     margin-left: 25%;
     margin-right: 25%;
+}
+
+.image-logo {
+    width: 7%;
 }
