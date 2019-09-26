@@ -69,13 +69,35 @@
         </div>
         <div class="content_bottom" id="tab3">
             <div class="form_question">
-                <h2><b> Contact us! </b></h2>
                 <form class="feedback_form">
-                    <input type="text" name="name" placeholder="Type here your name, please" class="myInput">
+                    <label for="name"><b>Contact us!</b></label>
+                    <input type="text" id="name" name="name" placeholder="Type here your name, please" class="myInput">
                     <input type="email" name="email" placeholder="Type here your email, please" class="myInput">
                     <input type="tel" name="phone" placeholder="Type here your phone, please" class="myInput">
                     <textarea name="question" placeholder="Ask your question" class="myQuestion"></textarea>
-                    <input class="button_submit" type="submit" value="Send email!">
+                    <div class="checkbox">
+                        <input type="checkbox" id="bot" name="I am not a bot" value="">
+                        <label for="bot">I am not a bot</label>
+                    </div>
+                    <label for="date-of-birth" class="label">Enter your date of birth</label>
+                    <input type="date" id="date-of-birth" class="myInput">
+                    <label for="color" class="label">Choose your color</label>
+                    <input type="color" id="color" name="color" value="#555" class="myInput">
+                    <label for="number" class="label">Select your favorite number</label>
+                    <input type="number" id="number" placeholder="number" class="myInput">
+                    <label for="range" class="label">Choose other number from 0 to 20 via slider</label>
+                    <input type="range" id="range" class="myInput">
+                    <div class="my-gender">
+                        <p>Who are you?</p>
+                        <input type="radio" name="gender" value="male"> Male <br>
+                        <input type="radio" name="gender" value="female"> Female <br>
+                    </div>
+                    <div class="block-buttons">
+                        <input class="buttons" type="reset" name="reset" value="reset you info">
+                        <input class="buttons" type="submit" value="Send email!">
+<!--                        <input type="hidden" name="hidden" value="xxx">-->
+                    </div>
+
                 </form>
             </div>
         </div>
