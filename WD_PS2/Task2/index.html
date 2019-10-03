@@ -9,14 +9,14 @@
 <body>
 <div class="container">
     <h1 class="title">time conversion</h1>
-    <h3 class="title_of_input">enter time in seconds</h3>
+    <label for="firstInput" class="title_of_input">enter time in seconds</label>
     <input class="my_input" id="firstInput" name="time_in_second" placeholder="enter time in second" type="number">
     <input class="button_calculate" id="button_first" type="submit" value="Calculate!">
     <h2 class="answer">time in format hh:mm:ss is</h2>
     <p id="firstResult" class="result"></p>
-    <h3 class="title_of_input">enter time in format hh:mm:ss</h3>
+    <label for="secondInput" class="title_of_input">enter time in format hh:mm:ss</label>
     <input class="my_input" id="secondInput" name="time_in_hours" placeholder="enter time in format hh:mm:ss"
-           type="text">
+                                            type="time" step="1">
     <input class="button_calculate" id="button_second" type="submit" value="Calculate!">
     <h2 class="answer">time in seconds is</h2>
     <p id="secondResult" class="result"></p>

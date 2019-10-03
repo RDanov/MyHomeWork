@@ -1,3 +1,6 @@
+const SECONDS_IN_HOUR = 60 * 60;
+const SECONDS_IN_MINUTE = 60;
+
 window.onload = function () {
     const buttonOne = document.querySelector('#button_first');
     buttonOne.addEventListener('click', (e) => {
@@ -33,12 +36,12 @@ function timeConversionFirst() {
 
     const secondsInHour = 60 * 60;
     const secondsInMinute = 60;
-    const hours = Math.trunc(time / secondsInHour);
-    time = time % secondsInHour;
-    const minutes = Math.trunc(time / secondsInMinute);
-    time = time % secondsInMinute;
+    const hours = Math.trunc(time / SECONDS_IN_HOUR);
+    time = time % SECONDS_IN_HOUR;
+    const minutes = Math.trunc(time / SECONDS_IN_MINUTE);
+    time = time % SECONDS_IN_MINUTE;
     let summ_of_numbers = 0;
-    output.innerText = hours + "hour(s), " + minutes + "minute(s), " + time + "second(s)";
+    output.innerText = hours + " hour(s), " + minutes + " minute(s), " + time + " second(s)";
 }
 
 function timeConversionSecond() {
@@ -53,15 +56,14 @@ function timeConversionSecond() {
     const timeElements = element.value.split(':');
     for (let i = 0; i < timeElements.length; i++) {
         timeElements[i] = +timeElements[i];
-        if (timeElements.length != 3 || !Number.isInteger(timeElements[i])) {
+        if (timeElements.length !== 3 || !Number.isInteger(timeElements[i])) {
             alert("enter time in format HH:MM:SS");
             return;
         }
     }
     const output = document.querySelector('#secondResult');
-    const secondsInHour = 60 * 60;
-    const secondsInMinute = 60;
-    const resultTime = timeElements[0] * secondsInHour + timeElements[1] * secondsInMinute + timeElements[2]
+
+    const resultTime = timeElements[0] * SECONDS_IN_HOUR + timeElements[1] * SECONDS_IN_MINUTE + timeElements[2];
     output.innerText = "times in seconds is " + resultTime + " seconds";
 }
 

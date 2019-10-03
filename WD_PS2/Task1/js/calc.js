@@ -2,7 +2,6 @@ window.onload = function () {
     const button = document.querySelector('.button_calculate');
     button.addEventListener('click', (e) => {
         console.log(e.target);
-
         sumOfNumbers();
     })
 };
@@ -33,17 +32,10 @@ function sumOfNumbers() {
         return;
     }
     let summ_of_numbers = 0;
-    if (firstNumber > secondNumber) {
-        for (let i = secondNumber; i <= firstNumber; i++) {
-            if (Math.abs(i) % 10 === 2 || Math.abs(i) % 10 === 3 || Math.abs(i) % 10 === 7) {
-                summ_of_numbers += i;
-            }
-        }
-    } else {
-        for (let i = firstNumber; i <= secondNumber; i++) {
-            if (Math.abs(i) % 10 === 2 || Math.abs(i) % 10 === 3 || Math.abs(i) % 10 === 7) {
-                summ_of_numbers += i;
-            }
+    const pattern = /3$|7$|2$/;
+    for (let index = Math.min(firstNumber, secondNumber); index <= Math.max(firstNumber, secondNumber); index++) {
+        if (pattern.test(index)) {
+            summ_of_numbers += index;
         }
     }
     output.innerText = summ_of_numbers;
