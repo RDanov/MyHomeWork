@@ -29,22 +29,22 @@ function timeBetweenDates() {
         alert("enter 2 times please");
         return;
     }
-    const secondsInYear = 60 * 60 * 24 * 365;
-    const secondsInMonth = 60 * 60 * 24 * 30;
-    const secondsInDay = 60 * 60 * 24;
-    const secondsInHour = 60 * 60;
-    const secondsInMinute = 60;
-    const years = Math.trunc(time / secondsInYear);
-    time = time % secondsInYear;
-    const months = Math.trunc(time / secondsInMonth);
-    time = time % secondsInMonth;
-    const days = Math.trunc(time / secondsInDay);
-    time = time % secondsInDay;
-    const hours = Math.trunc(time / secondsInHour);
-    time = time % secondsInHour;
-    const minutes = Math.trunc(time / secondsInMinute);
-    time = time % secondsInMinute;
+    const SECONDS_IN_MINUTE = 60;
+    const SECONDS_IN_HOUR = SECONDS_IN_MINUTE * 60;
+    const SECONDS_IN_DAY = SECONDS_IN_HOUR * 24;
+    const SECONDS_IN_MONTH = SECONDS_IN_DAY * 30;
+    const SECONDS_IN_YEAR = SECONDS_IN_DAY * 365;
+    const years = Math.trunc(time / SECONDS_IN_YEAR);
+    time = time % SECONDS_IN_YEAR;
+    const months = Math.trunc(time / SECONDS_IN_MONTH);
+    time = time % SECONDS_IN_MONTH;
+    const days = Math.trunc(time / SECONDS_IN_DAY);
+    time = time % SECONDS_IN_DAY;
+    const hours = Math.trunc(time / SECONDS_IN_HOUR);
+    time = time % SECONDS_IN_HOUR;
+    const minutes = Math.trunc(time / SECONDS_IN_MINUTE);
+    time = time % SECONDS_IN_MINUTE;
     let summ_of_numbers = 0;
-    output.innerText = years + "year(s), " + months + "month(s), " + days +
-        "day(s), " + hours + "hour(s), " + minutes + "minute(s), " + time + "second(s)";
+    output.innerText = years + " year(s), " + months + " month(s), " + days +
+        " day(s), " + hours + " hour(s), " + minutes + " minute(s), " + time + " second(s)";
 }

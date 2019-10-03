@@ -26,6 +26,7 @@ function sizeChessBoard() {
     }
 
     let sizeOfChessboard = element[0].value.split('x');
+    if (sizeOfChessboard.length === 1) sizeOfChessboard = element[0].value.split('х');
     horizontalQuantity = +sizeOfChessboard[0];
     verticalQuantity = +sizeOfChessboard[1];
     if (sizeOfChessboard.length != 2 || !Number.isInteger(horizontalQuantity) || !Number.isInteger(verticalQuantity)) {
@@ -40,7 +41,6 @@ function drawChessBoard() {
     const chessBoard = document.querySelector('.chessboard');
     ctx = chessBoard.getContext('2d');
     chessBoard.width = 1000;
-    // chessBoard.border = 2;
     const sizeOfBlock = +(chessBoard.width / horizontalQuantity);
     chessBoard.height = +(verticalQuantity * sizeOfBlock);
     let flag = true;
