@@ -1,5 +1,6 @@
 let contentFlag = true;
 let nameFlag = true;
+const COLUMN_IN_TABLE = 4;
 
 const GOODS = [
     {
@@ -46,7 +47,6 @@ window.onload = function () {
     calculateSumm();
     const sortingByCategory = document.getElementById('title-category');
     const sortingByName = document.getElementById('title-name');
-    // const search
 
     document.getElementById('select').addEventListener('change', e => {
         drawTable();
@@ -93,12 +93,10 @@ function drawTable() {
         }
     }
     let tbody = document.createElement('tbody');
-    let tr = document.createElement('tr');
     let items = ['category', 'name', 'amount', 'price'];
-
     for (let i = 0; i < countGoods; i++) {
         let tr = document.createElement('tr');
-        for (let j = 0; j < 4; j++) {
+        for (let j = 0; j < COLUMN_IN_TABLE; j++) {
             let td = document.createElement('td');
             td.innerHTML = GOODS[i][items[j]];
             tr.appendChild(td);
@@ -120,14 +118,12 @@ function calculateSumm() {
 }
 
 function sortingTableUp(numberColumn) {
+    const outputTitle = document.getElementById('title-category');
+    const outputName = document.getElementById('title-name');
     if (numberColumn === 0) {
-        const outputTitle = document.getElementById('title-category');
-        const outputName = document.getElementById('title-name');
         outputTitle.innerHTML = 'Category ▲';
         outputName.innerHTML = 'Name';
     } else {
-        const outputName = document.getElementById('title-name');
-        const outputTitle = document.getElementById('title-category');
         outputName.innerHTML = 'Name ▲';
         outputTitle.innerHTML = 'Category';
     }
@@ -138,14 +134,12 @@ function sortingTableUp(numberColumn) {
 }
 
 function sortingTableDown(numberColumn) {
+    const outputTitle = document.getElementById('title-category');
+    const outputName = document.getElementById('title-name');
     if (numberColumn === 0) {
-        const outputTitle = document.getElementById('title-category');
-        const outputName = document.getElementById('title-name');
         outputTitle.innerHTML = 'Category ▼';
         outputName.innerHTML = 'Name';
     } else {
-        const outputName = document.getElementById('title-name');
-        const outputTitle = document.getElementById('title-category');
         outputName.innerHTML = 'Name ▼';
         outputTitle.innerHTML = 'Category';
     }
@@ -161,27 +155,21 @@ function filterTable(string) {
         return
     }
     const table = document.getElementById("table");
-    let index = 1;
-    for (let i = table.rows.length - 2; i > 0; i--) {
-
+    for (let index = table.rows.length - 2; index > 0; index--) {
         let filter = table.rows[index].cells[0].innerHTML;
         if (!string.toLowerCase().includes(filter.toLowerCase())) {
             table.rows[index].remove();
-            index--;
         }
-        index++;
     }
 }
 
 function filterTableBySearch(string) {
     const table = document.getElementById("table");
-    let i = 1;
-    for (let i = table.rows.length - 2; i > 0; i--) {
-        let filter = table.rows[i].cells[1].innerHTML;
+    for (let index = table.rows.length - 2; index > 0; index--) {
+        let filter = table.rows[index].cells[1].innerHTML;
         if (!filter.toLowerCase().startsWith(string.toLowerCase())) {
-            table.rows[i].remove();
+            table.rows[index].remove();
         }
     }
 }
-
 

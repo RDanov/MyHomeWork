@@ -26,7 +26,6 @@ function checkAndSorting(links) {
         } else {
             elements[i] = elements[i].replace(regReplace, '');
         }
-
     }
 
     if (elements.length === 0) {
@@ -66,3 +65,4 @@ function checkLink(link) {
     let myRegExp = /^(https?:\/\/)?([\w\.]+)\.([a-z]{2,6}\.?)(\/[\w\.]*)*\/?$/;
     return myRegExp.test(link);
 }
+
