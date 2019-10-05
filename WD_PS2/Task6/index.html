@@ -9,12 +9,12 @@
 <body>
 <div class="container">
     <h1 class="title">Text and regular</h1>
-    <h3 class="title_of_input">Enter text </h3>
-    <textarea class="text_for_checked" name="text_for_checked" placeholder="enter text for checked"></textarea>
-    <h3 class="title_of_input">Enter text or regular</h3>
-    <input class="my_input" name="text_or_regular" placeholder="enter text or regular" type="text">
+    <label for="text_for_checked" class="title_of_input">Enter text</label>
+    <textarea class="text_for_checked" id="text_for_checked" placeholder="enter text for checked"></textarea>
+    <label for="text_or_regular" class="title_of_input">Enter text or regular</label>
+    <input class="my_input" id="text_or_regular" placeholder="enter text or regular" type="text">
     <input class="button_check" type="submit" value="check text">
-    <p class="result"> <mark class="mark"> </mark> </p>
+    <p class="result"></p>
 </div>
 <script src="js/checkText.js"></script>
 </body>
