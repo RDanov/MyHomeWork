@@ -1,0 +1,284 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.wrapper .header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100px;
+    font-size: 4rem;
+    color: black;
+    font-weight: normal;
+    font-family: Helvetica, sans-serif;
+    letter-spacing: 0;
+    word-spacing: 0;
+}
+
+strong {
+    color: #1abc9c;
+    letter-spacing: 1px;
+}
+
+.wrapper .header .column-left {
+    flex-grow: 1;
+    text-align: center;
+    left: 40px;
+}
+
+.wrapper .header .column_Right {
+    flex-grow: 1;
+}
+
+.wrapper .header .column_Right .topMenuRight {
+    font-size: 25px;
+    left: 0;
+    right: 20px;
+    top: 0;
+    text-align: center;
+    border: 0 solid #1FA2E1;
+}
+
+.topMenuRight ul li {
+    float: right;
+    vertical-align: center;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    list-style-position: inside;
+    padding: 30px;
+    vertical-align: center;
+}
+
+.wrapper .content {
+    font-family: Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper .content .content-top {
+    display: flex;
+    height: 100vh;
+    background-color: #16a085;
+
+}
+
+.wrapper .content-top .column-left {
+    width: 50%;
+    display: flex;
+    padding-right: 10%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.wrapper .content-top .column-left .image {
+    margin-right: 10px;
+    overflow: hidden;
+    height: auto;
+    width: 50%;
+}
+
+.wrapper .content .content-top .column-right {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    navbutton_background_color: #1abc9c;
+    margin-right: 5%;
+    font-size: 35px;
+    width: 50%;
+    vertical-align: baseline;
+    text-align: justify;
+    align-content: baseline;
+    justify-content: space-evenly;
+}
+
+.wrapper .content .content-top .column-right .content-top-header {
+    font-size: 45px;
+    position: relative;
+    flex-grow: 1;
+}
+
+.wrapper .content .content-top .column-right .top-content {
+    position: relative;
+    margin-top: 100px;
+    flex-grow: 1;
+}
+
+.wrapper .content .content-top .column-right .button-buy-now {
+    color: #fff;
+    background-color: #16a085;
+    cursor: pointer;
+    position: relative;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    width: 250px;
+    height: 60px;
+    font-size: 30px;
+    justify-content: center;
+}
+
+
+.wrapper .content .content-top .column:last-of-type {
+    color: #fff;
+    text-align: justify;
+    width: 50%;
+}
+
+.wrapper .content .content-center {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    text-align: center;
+    justify-content: space-evenly;
+
+}
+
+.wrapper .content .content-center .column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    justify-content: center;
+}
+
+.fa {
+    color: #ffffff;
+    background-color: #1abc9c;
+    padding: 30px;
+    border-radius: 120px;
+    margin-bottom: 30px;
+    width: 140px;
+}
+
+.content-header {
+    font-size: 40px;
+    margin-top: 200px;
+}
+
+.column-content {
+    font-size: 28px;
+}
+
+.wrapper .content .content-bottom {
+    background-color: #1abc9c;
+    height: auto;
+    width: 100%;
+    font-size: 40px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 3%;
+    padding-bottom: 5%;
+}
+
+.buttons {
+    display: flex;
+    color: #fff;
+    background-color: #1abc9c;
+    cursor: pointer;
+    width: 40%;
+    height: 10%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 2px solid #fff;
+    font-size: 25px;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.my-input {
+    width: 50%;
+    height: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 15px;
+}
+
+.myQuestion {
+    color: #000;
+    margin-top: 15px;
+    width: 50%;
+    height: 200px;
+    vertical-align: text-top;
+    margin-bottom: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 15px;
+    resize: none;
+}
+
+.checkbox {
+    width: 50%;
+    height: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    font-size: 25px;
+}
+
+.label {
+    font-size: 18px;
+}
+
+.my-form {
+    font-size: 15px;
+}
+
+.my-gender {
+    display: flex;
+    flex-direction: row;
+    font-size: 25px;
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 30%;
+    justify-content: space-between;
+}
+
+.block-buttons {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.image-logo {
+    width: 7%;
+}
+
+#toTop {
+    width: 10%;
+    height: 5%;
+    border: 2px solid #fbffff;
+    border-radius: 5px;
+    background: #1abc9c;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    position: fixed;
+    bottom: 4%;
+    right: 2%;
+    cursor: pointer;
+    display: none;
+    color: white;
+    font-family: Helvetica, sans-serif;;
+    font-size: 25px;
+}
