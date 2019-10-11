@@ -1,6 +1,7 @@
 let contentFlag = true;
 let nameFlag = true;
 const COLUMN_IN_TABLE = 4;
+const CURRENCY = " $";
 
 const GOODS = [
     {
@@ -65,19 +66,19 @@ window.onload = function () {
 
     sortingByCategory.addEventListener('click', e => {
         if (contentFlag) {
-            sortingTableDown(0);
+            sortingTableUp(0);
             contentFlag = !contentFlag;
         } else {
-            sortingTableUp(0);
+            sortingTableDown(0);
             contentFlag = !contentFlag;
         }
     });
     sortingByName.addEventListener('click', e => {
         if (nameFlag) {
-            sortingTableDown(1);
+            sortingTableUp(1);
             nameFlag = !nameFlag;
         } else {
-            sortingTableUp(1);
+            sortingTableDown(1);
             nameFlag = !nameFlag;
         }
     })
@@ -109,12 +110,12 @@ function drawTable() {
 function calculateSumm() {
     const outputTotal = document.getElementById('total');
     let summTotal = 0;
-    const table = document.getElementById("table");
+    const table = document.getElementById('table');
     for (let i = 1; i < table.rows.length - 1; i++) {
         let row = table.rows[i];
         summTotal = summTotal + (+row.cells[2].innerHTML * (+row.cells[3].innerHTML));
     }
-    outputTotal.innerHTML = summTotal + " $";
+    outputTotal.innerHTML = summTotal + CURRENCY;
 }
 
 function sortingTableUp(numberColumn) {
