@@ -12,12 +12,7 @@ function analisingText() {
         alert("Enter text and regular");
         return;
     }
-    const regex = new RegExp(regularOrText, 'g');
-    const array = [...textArea.matchAll(regex)];
-    for (let index = 0; index < array.length; index++) {
-        let temp = new RegExp(array[index], 'g');
-        textArea = textArea.replace(temp, '<mark>' + array[index] + '</mark>');
-    }
+    textArea = textArea.replace(new RegExp(regularOrText, 'g'), '<mark>' + '$&' + '</mark>');
     const output = document.querySelector('.result');
     output.innerHTML = textArea;
 }
