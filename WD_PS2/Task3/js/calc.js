@@ -1,3 +1,9 @@
+const SECONDS_IN_MINUTE = 60;
+const MINUTES_IN_HOUR = 60;
+const HOURS_IN_DAY = 24;
+const DAYS_IN_MONTH = 30;
+const MONTHS_IN_YEAR = 12;
+
 window.onload = function () {
     const button = document.querySelector('.button_calculate');
     button.addEventListener('click', (e) => {
@@ -21,29 +27,46 @@ function timeBetweenDates() {
 
     const firstTime = new Date(elements[0].value);
     const secondTime = new Date(elements[1].value);
-    let time = Math.abs(firstTime.getTime() - secondTime.getTime()) / 1000;
-
     const output = document.querySelector('.result');
-    if (!output || !time) {
+    if (!firstTime.getTime() || !secondTime.getTime()) {
         alert("enter 2 times please");
         return;
     }
-    const SECONDS_IN_MINUTE = 60;
-    const SECONDS_IN_HOUR = SECONDS_IN_MINUTE * 60;
-    const SECONDS_IN_DAY = SECONDS_IN_HOUR * 24;
-    const SECONDS_IN_MONTH = SECONDS_IN_DAY * 30;
-    const SECONDS_IN_YEAR = SECONDS_IN_DAY * 365;
-    const years = Math.trunc(time / SECONDS_IN_YEAR);
-    time = time % SECONDS_IN_YEAR;
-    const months = Math.trunc(time / SECONDS_IN_MONTH);
-    time = time % SECONDS_IN_MONTH;
-    const days = Math.trunc(time / SECONDS_IN_DAY);
-    time = time % SECONDS_IN_DAY;
-    const hours = Math.trunc(time / SECONDS_IN_HOUR);
-    time = time % SECONDS_IN_HOUR;
-    const minutes = Math.trunc(time / SECONDS_IN_MINUTE);
-    time = time % SECONDS_IN_MINUTE;
-    let summ_of_numbers = 0;
-    output.innerText = years + " year(s), " + months + " month(s), " + days +
-        " day(s), " + hours + " hour(s), " + minutes + " minute(s), " + time + " second(s)";
+    if (firstTime >= secondTime) {
+        calculateTimeBetweenDates(firstTime, secondTime);
+    } else {
+        calculateTimeBetweenDates(secondTime, firstTime);
+    }
+
+    function calculateTimeBetweenDates(firstTime, secondTime) {
+        let years = firstTime.getFullYear() - secondTime.getFullYear();
+        let months = firstTime.getMonth() - secondTime.getMonth();
+        let days = firstTime.getDay() - secondTime.getDay();
+        let hours = firstTime.getHours() - secondTime.getHours();
+        let minutes = firstTime.getMinutes() - secondTime.getMinutes();
+        let seconds = firstTime.getSeconds() - secondTime.getSeconds();
+        if (seconds < 0) {
+            minutes--;
+            seconds += SECONDS_IN_MINUTE;
+        }
+        if (minutes < 0) {
+            hours--;
+            minutes += MINUTES_IN_HOUR;
+        }
+        if (hours < 0) {
+            days--;
+            hours += HOURS_IN_DAY;
+        }
+        if (days < 0) {
+            months--;
+            days += DAYS_IN_MONTH;
+        }
+        if (months < 0) {
+            years--;
+            months += MONTHS_IN_YEAR;
+        }
+
+        output.innerText = years + " year(s), " + months + " month(s), " + days +
+            " day(s), " + hours + " hour(s), " + minutes + " minute(s), " + seconds + " second(s)";
+    }
 }
