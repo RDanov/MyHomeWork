@@ -4,8 +4,6 @@ let verticalQuantity = 0;
 window.onload = function () {
     const button = document.querySelector('.button_bild');
     button.addEventListener('click', (e) => {
-        console.log(e.target);
-
         sizeChessBoard();
         drawChessBoard(horizontalQuantity, verticalQuantity);
     })

@@ -2,11 +2,10 @@ window.onload = function () {
     const textArea = document.querySelector('.link_and_ip');
     const outputArea = document.querySelector('.result');
     textArea.addEventListener('blur', (e) => {
-        console.log(e.target);
         const links = e.target.value;
         checkAndSorting(links);
     })
-    outputArea.addEventListener('click', (e) =>{
+    outputArea.addEventListener('click', (e) => {
         window.open();
     })
 };
@@ -19,7 +18,7 @@ function checkAndSorting(links) {
     }
 
     let elements = links.split(',');
-    const regReplace =  /^(https?:\/\/)/;
+    const regReplace = /^(https?:\/\/)/;
     for (let i = elements.length - 1; i >= 0; i--) {
         if (!checkIPorAddress(elements[i])) {
             elements.splice(i, 1);
