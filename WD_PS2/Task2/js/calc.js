@@ -3,11 +3,11 @@ const SECONDS_IN_MINUTE = 60;
 
 window.onload = function () {
     const buttonOne = document.querySelector('#button_first');
-    buttonOne.addEventListener('click', (e) => {
+    buttonOne.addEventListener('click', () => {
         timeConversionFirst();
     });
     const buttonSecond = document.querySelector('#button_second');
-    buttonSecond.addEventListener('click', (e) => {
+    buttonSecond.addEventListener('click', () => {
         timeConversionSecond();
     })
 };
@@ -34,13 +34,10 @@ function timeConversionFirst() {
         return;
     }
 
-    const secondsInHour = 60 * 60;
-    const secondsInMinute = 60;
     const hours = Math.trunc(time / SECONDS_IN_HOUR);
     time = time % SECONDS_IN_HOUR;
     const minutes = Math.trunc(time / SECONDS_IN_MINUTE);
     time = time % SECONDS_IN_MINUTE;
-    let summ_of_numbers = 0;
     output.innerText = hours + " hour(s), " + minutes + " minute(s), " + time + " second(s)";
 }
 
