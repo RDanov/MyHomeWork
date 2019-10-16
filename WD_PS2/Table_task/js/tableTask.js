@@ -1,8 +1,7 @@
 let contentFlag = true;
 let nameFlag = true;
-const COLUMN_IN_TABLE = 4;
 const CURRENCY = " $";
-
+const ITEMS = ['category', 'name', 'amount', 'price'];
 const GOODS = [
     {
         category: 'furniture',
@@ -41,7 +40,6 @@ const GOODS = [
         price: 3
     }
 ];
-
 
 window.onload = function () {
     drawTable();
@@ -85,7 +83,6 @@ window.onload = function () {
 };
 
 function drawTable() {
-
     let countGoods = GOODS.length;
     let table = document.getElementById('table');
     if (table.rows.length > 2) {
@@ -94,12 +91,11 @@ function drawTable() {
         }
     }
     let tbody = document.createElement('tbody');
-    let items = ['category', 'name', 'amount', 'price'];
     for (let i = 0; i < countGoods; i++) {
         let tr = document.createElement('tr');
-        for (let j = 0; j < COLUMN_IN_TABLE; j++) {
+        for (let j = 0; j < ITEMS.length; j++) {
             let td = document.createElement('td');
-            td.innerHTML = GOODS[i][items[j]];
+            td.innerHTML = GOODS[i][ITEMS[j]];
             tr.appendChild(td);
         }
         tbody.appendChild(tr);
@@ -168,7 +164,7 @@ function filterTableBySearch(string) {
     const table = document.getElementById("table");
     for (let index = table.rows.length - 2; index > 0; index--) {
         let filter = table.rows[index].cells[1].innerHTML;
-        if (!filter.toLowerCase().startsWith(string.toLowerCase())) {
+        if (!filter.toLowerCase().includes(string.toLowerCase())) {
             table.rows[index].remove();
         }
     }
