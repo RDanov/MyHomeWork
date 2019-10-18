@@ -1,6 +1,8 @@
 let contentFlag = true;
 let nameFlag = true;
 const CURRENCY = " $";
+const outputTitle = document.getElementById('title-category');
+const outputName = document.getElementById('title-name');
 const GOODS = [
     {
         category: 'furniture',
@@ -41,49 +43,39 @@ const GOODS = [
 ];
 
 window.onload = function () {
-    const filterByCategory = document.getElementById('select').value;
-    const searchByName = document.getElementById('inputOfSearch').value;
-    drawTable(filterByCategory, searchByName);
+    drawTable();
 
     document.getElementById('select').addEventListener('change', () => {
-        const filterByCategory = document.getElementById('select').value;
-        const searchByName = document.getElementById('inputOfSearch').value;
-        drawTable(filterByCategory, searchByName);
+        drawTable();
     });
 
     document.getElementById('inputOfSearch').addEventListener('input', () => {
-        const searchByName = document.getElementById('inputOfSearch').value;
-        const filterByCategory = document.getElementById('select').value;
-        drawTable(filterByCategory, searchByName);
+        drawTable();
     });
 
-    const sortingByCategory = document.getElementById('title-category');
-    sortingByCategory.addEventListener('click', () => {
-        const searchByName = document.getElementById('inputOfSearch').value;
-        const filterByCategory = document.getElementById('select').value;
+    outputTitle.addEventListener('click', () => {
         sortingTable(0, contentFlag);
         contentFlag = !contentFlag;
-        drawTable(filterByCategory, searchByName);
+        drawTable();
     });
-    const sortingByName = document.getElementById('title-name');
-    sortingByName.addEventListener('click', () => {
-        const searchByName = document.getElementById('inputOfSearch').value;
-        const filterByCategory = document.getElementById('select').value;
+    outputName.addEventListener('click', () => {
         sortingTable(1, nameFlag);
         nameFlag = !nameFlag;
-        drawTable(filterByCategory, searchByName);
+        drawTable();
     })
 };
 
-function drawTable(categorySelect, searchName) {
+function drawTable() {
     const table = document.getElementById('table-body');
     const outputTotal = document.getElementById('total');
+    const searchName = document.getElementById('inputOfSearch').value;
+    const filterByCategory = document.getElementById('select').value;
     let tableBody = "<tbody>";
     const countGoods = GOODS.length;
     let total = 0;
     for (let i = 0; i < countGoods; i++) {
         tableBody += '<tr>';
-        if ((categorySelect.toLowerCase().includes(GOODS[i].category.toLowerCase())) || (categorySelect === '')) {
+        if ((filterByCategory.toLowerCase().includes(GOODS[i].category.toLowerCase())) || (filterByCategory === '')) {
             if ((GOODS[i].name.toLowerCase().includes(searchName.toLowerCase())) || (searchName === '')) {
                 tableBody += "<th>" + GOODS[i].category + "</th>" + "<th>" + GOODS[i].name + "</th>" +
                     "<th>" + GOODS[i].amount + "</th>" + "<th>" + GOODS[i].price + "</th>";
@@ -97,8 +89,6 @@ function drawTable(categorySelect, searchName) {
 }
 
 function sortingTable(numberColumn, contentFlag) {
-    const outputTitle = document.getElementById('title-category');
-    const outputName = document.getElementById('title-name');
     if (contentFlag) {
         if (numberColumn === 0) {
             outputTitle.innerHTML = 'Category ▲';
