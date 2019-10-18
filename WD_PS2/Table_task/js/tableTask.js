@@ -1,7 +1,6 @@
 let contentFlag = true;
 let nameFlag = true;
 const CURRENCY = " $";
-const ITEMS = ['category', 'name', 'amount', 'price'];
 const GOODS = [
     {
         category: 'furniture',
@@ -42,27 +41,26 @@ const GOODS = [
 ];
 
 window.onload = function () {
-    drawTable();
-    calculateSumm();
+    const filterByCategory = document.getElementById('select').value;
+    const searchByName = document.getElementById('inputOfSearch').value;
+    drawTable(filterByCategory, searchByName);
+
+    document.getElementById('select').addEventListener('change', () => {
+        const filterByCategory = document.getElementById('select').value;
+        const searchByName = document.getElementById('inputOfSearch').value;
+        drawTable(filterByCategory, searchByName);
+    });
+
+    document.getElementById('inputOfSearch').addEventListener('input', () => {
+        const searchByName = document.getElementById('inputOfSearch').value;
+        const filterByCategory = document.getElementById('select').value;
+        drawTable(filterByCategory, searchByName);
+    });
+
     const sortingByCategory = document.getElementById('title-category');
-    const sortingByName = document.getElementById('title-name');
-
-    document.getElementById('select').addEventListener('change', e => {
-        drawTable();
-        filterTable(document.getElementById('select').value);
-        filterTableBySearch(document.getElementById('inputOfSearch').value);
-        calculateSumm();
-    });
-
-    document.getElementById('inputOfSearch').addEventListener('input', e => {
-        drawTable();
-        filterTable(document.getElementById('select').value);
-        filterTableBySearch(document.getElementById('inputOfSearch').value);
-        calculateSumm();
-    });
-
-
-    sortingByCategory.addEventListener('click', e => {
+    sortingByCategory.addEventListener('click', () => {
+        const searchByName = document.getElementById('inputOfSearch').value;
+        const filterByCategory = document.getElementById('select').value;
         if (contentFlag) {
             sortingTableUp(0);
             contentFlag = !contentFlag;
@@ -70,8 +68,12 @@ window.onload = function () {
             sortingTableDown(0);
             contentFlag = !contentFlag;
         }
+        drawTable(filterByCategory, searchByName);
     });
-    sortingByName.addEventListener('click', e => {
+    const sortingByName = document.getElementById('title-name');
+    sortingByName.addEventListener('click', () => {
+        const searchByName = document.getElementById('inputOfSearch').value;
+        const filterByCategory = document.getElementById('select').value;
         if (nameFlag) {
             sortingTableUp(1);
             nameFlag = !nameFlag;
@@ -79,40 +81,31 @@ window.onload = function () {
             sortingTableDown(1);
             nameFlag = !nameFlag;
         }
+        drawTable(filterByCategory, searchByName);
     })
 };
 
-function drawTable() {
-    let countGoods = GOODS.length;
-    let table = document.getElementById('table');
-    if (table.rows.length > 2) {
-        for (let i = table.rows.length - 2; i > 0; i--) {
-            table.rows[i].remove();
-        }
-    }
-    let tbody = document.createElement('tbody');
+function drawTable(categorySelect, searchName) {
+    const table = document.getElementById('table-body');
+    const outputTotal = document.getElementById('total');
+    let tableBody = "<tbody>";
+    const countGoods = GOODS.length;
+    let total = 0;
     for (let i = 0; i < countGoods; i++) {
-        let tr = document.createElement('tr');
-        for (let j = 0; j < ITEMS.length; j++) {
-            let td = document.createElement('td');
-            td.innerHTML = GOODS[i][ITEMS[j]];
-            tr.appendChild(td);
+        tableBody += '<tr>';
+        if ((categorySelect.toLowerCase().includes(GOODS[i].category.toLowerCase())) || (categorySelect === '')) {
+            if ((GOODS[i].name.toLowerCase().includes(searchName.toLowerCase())) || (searchName === '')) {
+                tableBody += "<th>" + GOODS[i].category + "</th>" + "<th>" + GOODS[i].name + "</th>" +
+                    "<th>" + GOODS[i].amount + "</th>" + "<th>" + GOODS[i].price + "</th>";
+                total += ((+GOODS[i].price) * (+GOODS[i].amount));
+            }
         }
-        tbody.appendChild(tr);
     }
-    table.appendChild(tbody);
+    tableBody += "</tr>";
+    table.innerHTML = tableBody;
+    outputTotal.innerHTML = total + CURRENCY;
 }
 
-function calculateSumm() {
-    const outputTotal = document.getElementById('total');
-    let summTotal = 0;
-    const table = document.getElementById('table');
-    for (let i = 1; i < table.rows.length - 1; i++) {
-        let row = table.rows[i];
-        summTotal = summTotal + (+row.cells[2].innerHTML * (+row.cells[3].innerHTML));
-    }
-    outputTotal.innerHTML = summTotal + CURRENCY;
-}
 
 function sortingTableUp(numberColumn) {
     const outputTitle = document.getElementById('title-category');
@@ -120,14 +113,12 @@ function sortingTableUp(numberColumn) {
     if (numberColumn === 0) {
         outputTitle.innerHTML = 'Category ▲';
         outputName.innerHTML = 'Name';
+        GOODS.sort((a, b) => a.category > b.category ? 1 : -1);
     } else {
         outputName.innerHTML = 'Name ▲';
         outputTitle.innerHTML = 'Category';
+        GOODS.sort((a, b) => a.name > b.name ? 1 : -1);
     }
-    let sortedTable = Array.from(table.rows)
-        .slice(1, table.rows.length - 1)
-        .sort((rowA, rowB) => rowA.cells[numberColumn].innerHTML > rowB.cells[numberColumn].innerHTML ? 1 : -1);
-    table.tBodies[0].append(...sortedTable);
 }
 
 function sortingTableDown(numberColumn) {
@@ -136,37 +127,10 @@ function sortingTableDown(numberColumn) {
     if (numberColumn === 0) {
         outputTitle.innerHTML = 'Category ▼';
         outputName.innerHTML = 'Name';
+        GOODS.sort((a, b) => a.category > b.category ? -1 : 1);
     } else {
         outputName.innerHTML = 'Name ▼';
         outputTitle.innerHTML = 'Category';
-    }
-    let sortedTable = Array.from(table.rows)
-        .slice(1, table.rows.length - 1)
-        .sort((rowA, rowB) => rowA.cells[numberColumn].innerHTML < rowB.cells[numberColumn].innerHTML ? 1 : -1);
-    table.tBodies[0].append(...sortedTable);
-}
-
-function filterTable(string) {
-    if (string === '') {
-        drawTable();
-        return
-    }
-    const table = document.getElementById("table");
-    for (let index = table.rows.length - 2; index > 0; index--) {
-        let filter = table.rows[index].cells[0].innerHTML;
-        if (!string.toLowerCase().includes(filter.toLowerCase())) {
-            table.rows[index].remove();
-        }
+        GOODS.sort((a, b) => a.name > b.name ? -1 : 1);
     }
 }
-
-function filterTableBySearch(string) {
-    const table = document.getElementById("table");
-    for (let index = table.rows.length - 2; index > 0; index--) {
-        let filter = table.rows[index].cells[1].innerHTML;
-        if (!filter.toLowerCase().includes(string.toLowerCase())) {
-            table.rows[index].remove();
-        }
-    }
-}
-
