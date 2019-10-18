@@ -35,14 +35,13 @@ function timeConversionFirst() {
     }
 
     let hours = Math.trunc(time / SECONDS_IN_HOUR);
-    if (hours < 10) {
-        hours = "0" + hours;
-    }
-
+    if (hours < 10) hours = "0" + hours;
     time = time % SECONDS_IN_HOUR;
-    const minutes = Math.trunc(time / SECONDS_IN_MINUTE);
+    let minutes = Math.trunc(time / SECONDS_IN_MINUTE);
+    if (minutes < 10) minutes = "0" + minutes;
     time = time % SECONDS_IN_MINUTE;
-    output.innerText = hours + ":" + minutes + ":" + time;
+    if (time < 10) time = "0" + time;
+    output.innerText = `${hours}:${minutes}:${time}`;
 }
 
 function timeConversionSecond() {
