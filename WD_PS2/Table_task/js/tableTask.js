@@ -61,26 +61,16 @@ window.onload = function () {
     sortingByCategory.addEventListener('click', () => {
         const searchByName = document.getElementById('inputOfSearch').value;
         const filterByCategory = document.getElementById('select').value;
-        if (contentFlag) {
-            sortingTableUp(0);
-            contentFlag = !contentFlag;
-        } else {
-            sortingTableDown(0);
-            contentFlag = !contentFlag;
-        }
+        sortingTable(0, contentFlag);
+        contentFlag = !contentFlag;
         drawTable(filterByCategory, searchByName);
     });
     const sortingByName = document.getElementById('title-name');
     sortingByName.addEventListener('click', () => {
         const searchByName = document.getElementById('inputOfSearch').value;
         const filterByCategory = document.getElementById('select').value;
-        if (nameFlag) {
-            sortingTableUp(1);
-            nameFlag = !nameFlag;
-        } else {
-            sortingTableDown(1);
-            nameFlag = !nameFlag;
-        }
+        sortingTable(1, nameFlag);
+        nameFlag = !nameFlag;
         drawTable(filterByCategory, searchByName);
     })
 };
@@ -106,31 +96,28 @@ function drawTable(categorySelect, searchName) {
     outputTotal.innerHTML = total + CURRENCY;
 }
 
-
-function sortingTableUp(numberColumn) {
+function sortingTable(numberColumn, contentFlag) {
     const outputTitle = document.getElementById('title-category');
     const outputName = document.getElementById('title-name');
-    if (numberColumn === 0) {
-        outputTitle.innerHTML = 'Category ▲';
-        outputName.innerHTML = 'Name';
-        GOODS.sort((a, b) => a.category > b.category ? 1 : -1);
+    if (contentFlag) {
+        if (numberColumn === 0) {
+            outputTitle.innerHTML = 'Category ▲';
+            outputName.innerHTML = 'Name';
+            GOODS.sort((a, b) => a.category > b.category ? 1 : -1);
+        } else {
+            outputName.innerHTML = 'Name ▲';
+            outputTitle.innerHTML = 'Category';
+            GOODS.sort((a, b) => a.name > b.name ? 1 : -1);
+        }
     } else {
-        outputName.innerHTML = 'Name ▲';
-        outputTitle.innerHTML = 'Category';
-        GOODS.sort((a, b) => a.name > b.name ? 1 : -1);
-    }
-}
-
-function sortingTableDown(numberColumn) {
-    const outputTitle = document.getElementById('title-category');
-    const outputName = document.getElementById('title-name');
-    if (numberColumn === 0) {
-        outputTitle.innerHTML = 'Category ▼';
-        outputName.innerHTML = 'Name';
-        GOODS.sort((a, b) => a.category > b.category ? -1 : 1);
-    } else {
-        outputName.innerHTML = 'Name ▼';
-        outputTitle.innerHTML = 'Category';
-        GOODS.sort((a, b) => a.name > b.name ? -1 : 1);
+        if (numberColumn === 0) {
+            outputTitle.innerHTML = 'Category ▼';
+            outputName.innerHTML = 'Name';
+            GOODS.sort((a, b) => a.category > b.category ? -1 : 1);
+        } else {
+            outputName.innerHTML = 'Name ▼';
+            outputTitle.innerHTML = 'Category';
+            GOODS.sort((a, b) => a.name > b.name ? -1 : 1);
+        }
     }
 }
