@@ -1,36 +1,37 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
-
-#mySelect {
-    overflow: hidden;
-    width: 300px;
-    height: 50px;
-    color: #fef8eb;
-    background-color: #202020;
-    cursor: pointer;
+.wrapper {
     position: relative;
 }
 
-#arrow {
-    color: #fef8eb;
-}
-
-.values {
-    cursor: pointer;
-    height: 40px;
-
-}
-
-#select-house {
+.dropdown {
     display: block;
-    width: 100%;
-    height: 200px;
-    margin-top: 0;
-    color: #fef8eb;
-    background-color: #202020;
-}
-
-#select-house > li {
-    display: block;
+    width: 15em;
+    left: -5em;
     cursor: pointer;
 }
 
+div {
+    display: flex;
+}
+
+.select {
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+}
+
+img {
+    margin: 5%;
+}
+
+.hidden {
+    display: none;
+}
+
+.selected {
+    border: 2px solid #bfbfbf;
+}

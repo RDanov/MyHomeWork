@@ -40,7 +40,7 @@ function timeConversionFirst() {
     let minutes = Math.trunc(time / SECONDS_IN_MINUTE);
     if (minutes < 10) minutes = "0" + minutes;
     time = time % SECONDS_IN_MINUTE;
-    if (time < 10) time = "0" + time;
+    if(time < 10) time = "0" + time;
     output.innerText = `${hours}:${minutes}:${time}`;
 }
 
