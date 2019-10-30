@@ -25,23 +25,29 @@ const ATM = {
         },
         // check current debet
         check() {
-            console.log(this.currentUser.debet);
-            this.logs.push(this.currentUser.id + 'checked account status');
+            if (this.isAuth) {
+                console.log(this.currentUser.debet);
+                this.logs.push(this.currentUser.id + 'checked account status');
+                return
+            } else console.log('authorization required');
         },
         // get cash - available for user only
         getCash(amount) {
-            if (amount > this.cash) {
-                console.log('Sorry! not enough money at the ATM');
-                this.logs.push(this.currentUser.id + 'not enough money at the ATM')
-            } else if (amount <= this.currentUser.debet) {
-                console.log('take the money after the card is returned');
-                this.logs.push(this.currentUser.id + 'got' + amount);
-                this.currentUser.debet -= amount;
-                this.cash -= amount;
-            } else {
-                console.log('insufficient funds in the account');
-                this.logs.push(this.currentUser.id + 'insufficient funds in the account');
-            }
+            if (this.auth()) {
+                if (amount > this.cash) {
+                    console.log('Sorry! not enough money at the ATM');
+                    this.logs.push(this.currentUser.id + 'not enough money at the ATM')
+                } else if (amount <= this.currentUser.debet) {
+                    console.log('take the money after the card is returned');
+                    this.logs.push(this.currentUser.id + 'got' + amount);
+                    this.currentUser.debet -= amount;
+                    this.cash -= amount;
+                } else {
+                    console.log('insufficient funds in the account');
+                    this.logs.push(this.currentUser.id + 'insufficient funds in the account');
+                }
+            } else console.log('authorization required');
+
 
         },
         // load cash - available for user only
@@ -51,7 +57,7 @@ const ATM = {
                 this.cash += amount;
                 console.log('account credited to' + amount);
                 this.logs.push(this.currentUser.id + 'account credited to' + amount);
-            }
+            } else console.log('authorization required');
 
         },
         // load cash to ATM - available for admin only - EXTENDED
@@ -62,18 +68,18 @@ const ATM = {
                     console.log('ATM account credited to' + amount);
                     this.logs.push(this.currentUser.id + 'ATM account credited to' + amount)
                 } else console.log('Access is denied')
-            }
+            } else console.log('authorization required');
         },
         // get cash actions logs - available for admin only - EXTENDED
         getLogs() {
             if (this.isAuth) {
                 if (this.currentUser.type === "admin") {
                     console.log("Saved logs: ");
-                    for (let i = 0; i <this.logs.length ; i++) {
+                    for (let i = 0; i < this.logs.length; i++) {
                         console.log(this.logs[i]);
                     }
                 } else console.log('Access is denied')
-            }
+            } else console.log('authorization required');
         },
 
 // log out
