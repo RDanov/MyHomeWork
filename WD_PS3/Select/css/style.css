@@ -35,3 +35,9 @@ img {
 .selected {
     border: 2px solid #bfbfbf;
 }
+
+#triangle {
+    position: absolute;
+    top: 22px;
+    right: 25px;
+}
