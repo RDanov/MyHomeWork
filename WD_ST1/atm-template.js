@@ -25,7 +25,7 @@ const ATM = {
         },
         // check current debet
         check() {
-            if (this.isAuth) {
+            if (this.auth()) {
                 console.log(this.currentUser.debet);
                 this.logs.push(this.currentUser.id + 'checked account status');
                 return
@@ -52,7 +52,7 @@ const ATM = {
         },
         // load cash - available for user only
         loadCash(amount) {
-            if (this.isAuth) {
+            if (this.auth()) {
                 this.currentUser.debet += amount;
                 this.cash += amount;
                 console.log('account credited to' + amount);
@@ -62,7 +62,7 @@ const ATM = {
         },
         // load cash to ATM - available for admin only - EXTENDED
         loadAtmCash(amount) {
-            if (this.isAuth) {
+            if (this.auth()) {
                 if (this.currentUser.type === "admin") {
                     this.cash += amount;
                     console.log('ATM account credited to' + amount);
@@ -72,7 +72,7 @@ const ATM = {
         },
         // get cash actions logs - available for admin only - EXTENDED
         getLogs() {
-            if (this.isAuth) {
+            if (this.auth()) {
                 if (this.currentUser.type === "admin") {
                     console.log("Saved logs: ");
                     for (let i = 0; i < this.logs.length; i++) {
