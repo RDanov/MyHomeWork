@@ -45,7 +45,7 @@ $(document).ready(function () {
 //         let div = $("#select");
 //         if (div.has(e.target).length === 0) {
 //             $(div).siblings('.select').toggle('fast');
-//             // div.removeClass('select');
+//              div.removeClass('select');
 //         }
 //     });
 // });

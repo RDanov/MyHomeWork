@@ -9,6 +9,7 @@ body {
 }
 
 .dropdown {
+    position: absolute;
     display: block;
     width: 15em;
     left: -5em;
@@ -41,3 +42,4 @@ img {
     top: 22px;
     right: 25px;
 }
+
