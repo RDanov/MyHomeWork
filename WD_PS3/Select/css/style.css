@@ -10,7 +10,8 @@ body {
 
 .dropdown {
     position: absolute;
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 15em;
     left: -5em;
     cursor: pointer;

@@ -36,16 +36,13 @@ $(document).ready(function () {
             $(this).removeClass('selected')
         }
     });
-
-
 });
 
-// $(document).ready(function () {
-//     $(document).click(function (e) {
-//         let div = $("#select");
-//         if (div.has(e.target).length === 0) {
-//             $(div).siblings('.select').toggle('fast');
-//              div.removeClass('select');
-//         }
-//     });
-// });
+$(document).ready(function () {
+    $(document).click(function (e) {
+        let div = $('#dropdown');
+        if ((div.has(e.target).length === 0) && div.is(":visible")) {
+            $('#select').siblings('.select').hide('fast');
+        }
+    });
+});
