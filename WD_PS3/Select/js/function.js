@@ -10,7 +10,7 @@ const houses = [
     {house: 'House Tyrell', image: 'Images/House_Tyrell.png'}
 ];
 
-window.onload = function () {
+$(document).ready(function () {
     for (let element of houses) {
         const imageOfHouse = $('<img alt="Image of House" src=""/>');
         const cellOfSelect = $('<div></div>');
@@ -19,9 +19,6 @@ window.onload = function () {
         $(cellOfSelect).append(imageOfHouse, nameOfHouse).addClass('hidden select');
         $('#dropdown').append(cellOfSelect);
     }
-};
-
-$(document).ready(function () {
     let selected = $('#select');
     $('.select').click(function () {
         selected = $(this);
@@ -36,9 +33,6 @@ $(document).ready(function () {
             $(this).removeClass('selected')
         }
     });
-});
-
-$(document).ready(function () {
     $(document).click(function (e) {
         let div = $('#dropdown');
         if ((div.has(e.target).length === 0) && div.is(":visible")) {
@@ -46,3 +40,4 @@ $(document).ready(function () {
         }
     });
 });
+
