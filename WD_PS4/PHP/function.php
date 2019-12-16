@@ -52,3 +52,20 @@ function sumOfDigits()
         echo array_sum(str_split($str_number));
     }
 }
+
+function processWithArray()
+{
+    if (isset($_POST['processing'])) {
+        $array = array();
+        for ($i = 0; $i < 100; $i++) {
+            $array[$i] = mt_rand(1, 10);
+        }
+        $arrayOfUniqual = array_unique($array);
+        sort($arrayOfUniqual);
+        $resultArray = array_reverse($arrayOfUniqual);
+        for ($i = 0; $i < array_count_values($resultArray); $i++) {
+            $resultArray[$i] *= 2;
+        }
+        print_r($resultArray);
+    }
+}

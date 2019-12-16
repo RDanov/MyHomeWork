@@ -49,5 +49,12 @@
             <p class="content-center"><?= sumOfDigits() ?></p>
         </form>
     </div>
+    <div class="container">
+        <h1 class="content-center">Processing with array</h1>
+        <form method="post">
+            <input class="input-value" type="submit" name="processing" value="process" title="process"/>
+            <p class="content-center"><?= processWithArray() ?></p>
+        </form>
+    </div>
 </div>
 </body>
