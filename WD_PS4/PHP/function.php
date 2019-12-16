@@ -63,8 +63,9 @@ function processWithArray()
         $arrayOfUniqual = array_unique($array);
         sort($arrayOfUniqual);
         $resultArray = array_reverse($arrayOfUniqual);
-        for ($i = 0; $i < array_count_values($resultArray); $i++) {
-            $resultArray[$i] *= 2;
+//        $size = array_count_values($resultArray);
+        for ($i = 0; $i < count($resultArray); $i++) {
+            $resultArray[$i] = $resultArray[$i] * 2;
         }
         print_r($resultArray);
     }
