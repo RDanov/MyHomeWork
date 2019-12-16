@@ -24,6 +24,8 @@
             <p class="content-center"><?= sumOfNumbersSecond() ?></p>
         </form>
     </div>
+
+
     <div class="container">
         <h1 class="content-center">Chessboard</h1>
         <form method="post">
@@ -35,6 +37,16 @@
             </label>
             <input class="input-value" type="submit" name="chessboard" value="build" title="create chessboard">
             <div><?= createChessboard() ?></div>
+        </form>
+    </div>
+    <div class="container">
+        <h1 class="content-center">Sum of digits of a number</h1>
+        <form method="post">
+            <label class="content-center">Enter number, please
+                <input class="input-value" type="number" name="number" title="enter number"/>
+            </label>
+            <input class="input-value" type="submit" name="result" value="sum of digits" title="sum of digits"/>
+            <p class="content-center"><?= sumOfDigits() ?></p>
         </form>
     </div>
 </div>

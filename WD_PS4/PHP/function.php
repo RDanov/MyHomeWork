@@ -44,3 +44,11 @@ function createChessboard()
         echo $board;
     }
 }
+
+function sumOfDigits()
+{
+    if (isset($_POST['number'])) {
+        $str_number = (string)abs($_POST['number']);
+        echo array_sum(str_split($str_number));
+    }
+}
