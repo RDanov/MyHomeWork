@@ -24,6 +24,18 @@
             <p class="content-center"><?= sumOfNumbersSecond() ?></p>
         </form>
     </div>
-
+    <div class="container">
+        <h1 class="content-center">Chessboard</h1>
+        <form method="post">
+            <label class="content-center">enter width of chessboard
+                <input class="input-value" type="text" name="width" title="enter width"/>
+            </label>
+            <label class="content-center">enter height of chessboard
+                <input class="input-value" type="text" name="height" title="enter height"/>
+            </label>
+            <input class="input-value" type="submit" name="chessboard" value="build" title="create chessboard">
+            <div><?= createChessboard() ?></div>
+        </form>
+    </div>
 </div>
 </body>

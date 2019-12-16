@@ -23,3 +23,24 @@ function sumOfNumbersSecond()
         echo $sum;
     }
 }
+
+
+function createChessboard()
+{
+    if (isset($_POST['chessboard'])) {
+        $width = $_POST['width'];
+        $height = $_POST['height'];
+        $board = '<div class = "board-for-chess" style = "height: ' . ($height * 50) . 'px; width: ' . ($width * 50) . 'px;">';
+        for ($i = 0; $i < $width; $i++) {
+            for ($j = 0; $j < $height; $j++) {
+                if (($i + $j) % 2 === 0) {
+                    $board .= '<div class="black"></div>';
+                } else {
+                    $board .= '<div class="white"></div>';
+                }
+            }
+        }
+        $board .= '</div>';
+        echo $board;
+    }
+}
