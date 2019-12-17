@@ -56,5 +56,15 @@
             <p class="content-center"><?= processWithArray() ?></p>
         </form>
     </div>
+    <div class="container">
+        <h1 class="content-center">Counting characters</h1>
+        <form method="post">
+            <label class="content-center">Enter string, please
+                <input class="input-value" type="text" name="string" title="enter text">
+            </label>
+            <input class="input-value" type="submit" name="calculating" value="calculate" title="calculate"/>
+            <p class="content-center"><?= countSymbols() ?></p>
+        </form>
+    </div>
 </div>
 </body>

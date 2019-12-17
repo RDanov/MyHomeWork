@@ -1,6 +1,6 @@
 window.onload = function () {
     const button = document.querySelector('.button_calculate');
-    button.addEventListener('click', (e) => {
+    button.addEventListener('click', () => {
         sumOfNumbers();
     })
 };

@@ -70,3 +70,10 @@ function processWithArray()
         print_r($resultArray);
     }
 }
+
+
+function countSymbols() {
+    if (isset($_POST['string'])) {
+        echo iconv_strlen($_POST['string']);
+    }
+}
