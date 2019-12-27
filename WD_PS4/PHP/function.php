@@ -72,8 +72,31 @@ function processWithArray()
 }
 
 
-function countSymbols() {
+function countSymbols()
+{
     if (isset($_POST['string'])) {
         echo iconv_strlen($_POST['string']);
+    }
+}
+
+function countSpaces()
+{
+    if (isset($_POST['string'])) {
+        echo substr_count($_POST['string'], " ");
+    }
+}
+
+function countLines()
+{
+    if (isset($_POST['string'])) {
+        echo substr_count($_POST['string'], "\n") + 1;
+    }
+}
+
+function countSession()
+{
+    if (isset($_SESSION['сounter'])) {
+        echo $_SESSION['сounter'];
+
     }
 }
