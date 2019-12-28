@@ -27,7 +27,10 @@ session_start();
             <p class="content-center"><?= sumOfNumbersSecond() ?></p>
         </form>
     </div>
+    <div class="container">
+        <h1 class="content-center">File Manager</h1>
 
+    </div>
 
     <div class="container">
         <h1 class="content-center">Chessboard</h1>
