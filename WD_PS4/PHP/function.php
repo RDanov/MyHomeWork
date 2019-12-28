@@ -95,8 +95,10 @@ function countLines()
 
 function countSession()
 {
-    if (isset($_SESSION['сounter'])) {
-        echo $_SESSION['сounter'];
-
+    if (!isset($_SESSION['sessionCounter'])) {
+        $_SESSION['sessionCounter'] = 1;
+    } else {
+        $_SESSION['sessionCounter']++;
     }
+    echo $_SESSION['sessionCounter'];
 }

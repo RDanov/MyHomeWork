@@ -61,7 +61,7 @@ session_start();
     </div>
     <div class="container">
         <h1 class="content-center">Count sessions</h1>
-
+        <p class="content-center">Количество посещений: <?= countSession() ?></p>
     </div>
     <div class="container">
         <h1 class="content-center">Counting characters</h1>
@@ -70,14 +70,10 @@ session_start();
                 <textarea class="input-value" type="text" name="string" title="enter text"></textarea>
             </label>
             <input class="input-value" type="submit" name="calculating" value="calculate" title="calculate"/>
-            <p class="content-center">Lines<?= countLines() ?></p>
-            <p class="content-center">Spaces<?= countSpaces() ?></p>
-            <p class="content-center">Symbols<?= countSymbols() ?></p>
+            <p class="content-center">Lines: <?= countLines() ?></p>
+            <p class="content-center">Spaces: <?= countSpaces() ?></p>
+            <p class="content-center">Symbols: <?= countSymbols() ?></p>
         </form>
-    </div>
-    <div>
-        <h1 class="content-center">Session counter</h1>
-        <p class="content-center">Количество посещений: <?= countSession() ?></p>
     </div>
 </div>
 </body>
