@@ -11,7 +11,7 @@ include_once 'function.php'
 <body>
 <h1 class="content-center">What language do you speak?</h1>
 <div class="container">
-    <form method="post" >
+    <form method="post">
 
         <input type="submit" value="vote" class="button">
     </form>
