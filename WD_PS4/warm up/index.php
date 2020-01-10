@@ -6,7 +6,7 @@ session_start();
 <head>
     <meta charset="UTF-8">
     <title>WD_PS4 PHP JSON</title>
-    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <?= include_once 'php/function.php' ?>
 </head>
 <body>
@@ -14,6 +14,7 @@ session_start();
     <div class="container">
         <h1 class="content-center">sum of numbers from -1000 to 1000</h1>
         <form method="post">
+            <input type="hidden" value="task1" name="action"/>
             <input class="input-value" type="submit" name="submitFirstTask" value="Calculate Sum"
                    title="sum of numbers"/>
             <p class="content-center"><?= sumOfNumbersFirst() ?></p>
@@ -29,9 +30,18 @@ session_start();
     </div>
     <div class="container">
         <h1 class="content-center">File Manager</h1>
-
+        <form enctype="multipart/form-data" action="php/function.php" method="POST">
+            <input type="hidden" value="task3" name="action"/>
+            <span>Upload file:</span><input name="userfile" type="file"/>
+            <input type="submit" value="upload">
+        </form>
+        <div class="board-for-files">
+            <?php
+            include_once 'php/fileLoader.php';
+            echo loadFiles();
+            ?>
+        </div>
     </div>
-
     <div class="container">
         <h1 class="content-center">Chessboard</h1>
         <form method="post">

@@ -1,4 +1,38 @@
 <?php
+
+if (isset($_POST['action'])) {
+    switch (htmlentities($_POST['action'])) {
+        case 'task1':
+            sumOfNumbersFirst();
+            break;
+        case 'task2':
+            sumOfNumbersSecond();
+            break;
+        case 'task3':
+            downloadFiles();
+            break;
+        case 'task4':
+            createChessboard();
+            break;
+        case 'task5':
+            sumOfDigits();
+            break;
+        case 'task6':
+            processWithArray();
+            break;
+//        case 'task8':
+//            task8CalcText();
+//            break;
+//        case 'logout':
+//            session_destroy();
+//            returnHomepage();
+//            break;
+//        default:
+//            returnHomepage();
+//            break;
+    }
+}
+
 function sumOfNumbersFirst()
 {
     if (isset($_POST['submitFirstTask'])) {
@@ -24,6 +58,22 @@ function sumOfNumbersSecond()
     }
 }
 
+function downloadFiles()
+{
+    if (htmlspecialchars($_FILES['userfile']['name'])) {
+        $dir = '../downloads/';
+        $file = $_FILES['userfile']['name'];
+        $path = pathinfo($file);
+        $filename = $path['filename'];
+        $ext = $path['extension'];
+        $temp_name = $_FILES['userfile']['tmp_name'];
+        $path_filename_ext = $dir . $filename . "." . $ext;
+        if (!file_exists($path_filename_ext)) { //if file is not exist
+            move_uploaded_file($temp_name, $path_filename_ext); //move it to 'downloads' dir
+        }
+    }
+    returnHomepage();
+}
 
 function createChessboard()
 {
@@ -101,4 +151,9 @@ function countSession()
         $_SESSION['sessionCounter']++;
     }
     echo $_SESSION['sessionCounter'];
+}
+
+function returnHomepage()
+{
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
 }
