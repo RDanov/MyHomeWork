@@ -8,6 +8,7 @@ session_start();
     <title>WD_PS4 PHP JSON</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <?= include_once 'php/function.php' ?>
+    <?= include_once 'php/fileLoader.php' ?>
 </head>
 <body>
 <div class="wrapper">
@@ -36,10 +37,7 @@ session_start();
             <input type="submit" value="upload">
         </form>
         <div class="board-for-files">
-            <?php
-            include_once 'php/fileLoader.php';
-            echo loadFiles();
-            ?>
+            <?= loadFiles() ?>
         </div>
     </div>
     <div class="container">

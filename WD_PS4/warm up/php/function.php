@@ -1,35 +1,9 @@
 <?php
-
 if (isset($_POST['action'])) {
     switch (htmlentities($_POST['action'])) {
-        case 'task1':
-            sumOfNumbersFirst();
-            break;
-        case 'task2':
-            sumOfNumbersSecond();
-            break;
         case 'task3':
             downloadFiles();
             break;
-        case 'task4':
-            createChessboard();
-            break;
-        case 'task5':
-            sumOfDigits();
-            break;
-        case 'task6':
-            processWithArray();
-            break;
-//        case 'task8':
-//            task8CalcText();
-//            break;
-//        case 'logout':
-//            session_destroy();
-//            returnHomepage();
-//            break;
-//        default:
-//            returnHomepage();
-//            break;
     }
 }
 
@@ -68,8 +42,8 @@ function downloadFiles()
         $ext = $path['extension'];
         $temp_name = $_FILES['userfile']['tmp_name'];
         $path_filename_ext = $dir . $filename . "." . $ext;
-        if (!file_exists($path_filename_ext)) { //if file is not exist
-            move_uploaded_file($temp_name, $path_filename_ext); //move it to 'downloads' dir
+        if (!file_exists($path_filename_ext)) {
+            move_uploaded_file($temp_name, $path_filename_ext);
         }
     }
     returnHomepage();
@@ -113,7 +87,6 @@ function processWithArray()
         $arrayOfUniqual = array_unique($array);
         sort($arrayOfUniqual);
         $resultArray = array_reverse($arrayOfUniqual);
-//        $size = array_count_values($resultArray);
         for ($i = 0; $i < count($resultArray); $i++) {
             $resultArray[$i] = $resultArray[$i] * 2;
         }
