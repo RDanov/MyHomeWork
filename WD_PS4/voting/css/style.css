@@ -8,9 +8,12 @@ body {
 }
 
 .container {
-    margin-top: 3%;
-    width: 100%;
-    border: 2px solid white;
+    margin: 5%;
+    width: 90%;
+    height: 70%;
+    border: 3px solid white;
+    padding: 10px;
+    font-size: 30px;
 }
 
 .content-center {

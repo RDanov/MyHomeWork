@@ -1,37 +1,37 @@
-<?=
+<?php
 $arr = array(
     array(
-        'id' => 'english',
+        'id' => 'ENGLISH',
         'type' => 'radio',
         'name' => 'language',
         'value' => 'ENGLISH'
     ),
     array(
-        'id' => 'ukrainian',
+        'id' => 'UKRAINIAN',
         'type' => 'radio',
         'name' => 'language',
         'value' => 'UKRAINIAN'
     ),
     array(
-        'id' => 'russian',
+        'id' => 'RUSSIAN',
         'type' => 'radio',
         'name' => 'language',
         'value' => 'RUSSIAN'
     ),
     array(
-        'id' => 'deutsch',
+        'id' => 'DEUTSCH',
         'type' => 'radio',
         'name' => 'language',
         'value' => 'DEUTSCH'
     ),
     array(
-        'id' => 'chinese',
+        'id' => 'CHINESE',
         'type' => 'radio',
         'name' => 'language',
         'value' => 'CHINESE'
     ),
     array(
-        'id' => 'other',
+        'id' => 'OTHER',
         'type' => 'radio',
         'name' => 'language',
         'value' => 'OTHER'

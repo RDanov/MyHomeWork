@@ -1,4 +1,4 @@
-<?=
+<?php
 include_once 'function.php'
 ?>
 <!DOCTYPE html>
@@ -11,8 +11,10 @@ include_once 'function.php'
 <body>
 <h1 class="content-center">What language do you speak?</h1>
 <div class="container">
-    <form method="post">
-
+    <form method="post" action="chart.php">
+        <?php
+        array_for_visible($arr);
+        ?>
         <input type="submit" value="vote" class="button">
     </form>
 </div>
