@@ -6,14 +6,8 @@ function chartVisual()
     }
     $path_to_db = '../json/data.json';
     $dataArray = json_decode(file_get_contents($path_to_db), true);
-    if (isset($_POST['language'])) {
-        $leng = $_POST['language'];
-    }
-    if (array_key_exists($leng, $dataArray)) {
-        $dataArray[$leng]++;
-    } else {
-        $dataArray[$leng] = 1;
-    }
+    isset($_POST['language']) ? $leng = $_POST['language'] : null;
+    array_key_exists($leng, $dataArray) ? $dataArray[$leng]++ : $dataArray[$leng] = 1;
     file_put_contents($path_to_db, json_encode($dataArray));
     echo file_get_contents($path_to_db, true);
 }
