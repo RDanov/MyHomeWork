@@ -2,11 +2,11 @@ body {
 
 }
 
-.container {
+.header-container {
     margin-top: 2rem;
 }
 
-.container .panel {
+.header-container .panel {
     width: 600px;
 }
 

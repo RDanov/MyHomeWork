@@ -7,7 +7,7 @@ body {
     flex-direction: column;
 }
 
-.container {
+.header-container {
     margin: 5%;
     width: 90%;
     height: 70%;
